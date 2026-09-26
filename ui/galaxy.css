@@ -1,65 +1,55 @@
-/* MASUM GALAXY // Galaxy Cockpit v5
-   Galaxy is a dedicated visual layer inside Monaco; code stays above it. */
+/* MASUM GALAXY // Galaxy Cockpit v6
+   Direct background on Monaco's visible overflow guard. */
 
 .monaco-workbench { background: #01030a !important; }
 
-.monaco-workbench .part.editor .monaco-editor,
+/* Put the animated galaxy directly on the visible editor surface. */
 .monaco-workbench .part.editor .monaco-editor .overflow-guard {
   position: relative !important;
-  background: #020612 !important;
+  background-color: #020612 !important;
+  background-image:
+    linear-gradient(rgba(1,3,12,.44), rgba(1,3,12,.58)),
+    url("file:///D:/OneDrive/Web%20Development/Galaxy-VS-Code-Themes/assets/galaxy-cockpit.svg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
-/* Visible galaxy layer: above Monaco's opaque base, below text/cursor. */
-.monaco-workbench .part.editor .monaco-editor .overflow-guard::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    linear-gradient(rgba(1,3,12,.48), rgba(1,3,12,.60)),
-    url("file:///D:/OneDrive/Web%20Development/Galaxy-VS-Code-Themes/assets/galaxy-cockpit.svg")
-    center / cover no-repeat;
-  opacity: .92;
-}
-
-/* Remove opaque paint from editor internals. */
+/* Remove Monaco's opaque child paints so the background can show through. */
 .monaco-workbench .part.editor .monaco-editor-background,
 .monaco-workbench .part.editor .monaco-editor .margin,
 .monaco-workbench .part.editor .monaco-editor .monaco-scrollable-element,
 .monaco-workbench .part.editor .monaco-editor .lines-content,
-.monaco-workbench .part.editor .monaco-editor .view-overlays {
-  background: transparent !important;
-}
-
-/* Monaco rendering and interaction stay above the galaxy. */
-.monaco-workbench .part.editor .monaco-editor .margin,
-.monaco-workbench .part.editor .monaco-editor .monaco-scrollable-element,
-.monaco-workbench .part.editor .monaco-editor .view-lines,
 .monaco-workbench .part.editor .monaco-editor .view-overlays,
-.monaco-workbench .part.editor .monaco-editor .cursors-layer,
-.monaco-workbench .part.editor .monaco-editor .decorationsOverviewRuler {
-  position: relative;
-  z-index: 2;
+.monaco-workbench .part.editor .monaco-editor .view-lines,
+.monaco-workbench .part.editor .monaco-editor .contentWidgets,
+.monaco-workbench .part.editor .monaco-editor .overlayWidgets {
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
+/* Keep surrounding editor containers dark but non-opaque over the canvas. */
 .monaco-workbench .part.editor .editor-group-container,
-.monaco-workbench .part.editor .editor-container {
-  background: #01030a !important;
+.monaco-workbench .part.editor .editor-container,
+.monaco-workbench .part.editor .editor-instance,
+.monaco-workbench .part.editor .monaco-editor {
+  background-color: transparent !important;
 }
 
-/* Stable glass chrome; do not make menus transparent. */
+/* Stable futuristic chrome. */
 .monaco-workbench .part.sidebar,
 .monaco-workbench .part.auxiliarybar,
 .monaco-workbench .part.panel {
   background-color: rgba(2,7,20,.95) !important;
   backdrop-filter: blur(12px);
 }
+
 .monaco-workbench .part.activitybar,
 .monaco-workbench .part.statusbar,
 .monaco-workbench .part.titlebar {
   background-color: rgba(1,5,16,.98) !important;
 }
+
 .monaco-menu-container,
 .context-view,
 .context-view .monaco-menu,
@@ -72,10 +62,14 @@
   backdrop-filter: blur(14px);
 }
 
-.monaco-editor .view-lines { text-shadow: 0 0 1px rgba(120,245,255,.13); }
-.monaco-editor .cursor { box-shadow: 0 0 10px rgba(83,239,255,.75); }
+.monaco-editor .view-lines {
+  text-shadow: 0 0 1px rgba(120,245,255,.13);
+}
 
-/* Almost-hidden signature. */
+.monaco-editor .cursor {
+  box-shadow: 0 0 10px rgba(83,239,255,.75);
+}
+
 .monaco-workbench .part.editor::after {
   content: "MASUM BILLAH  //  GALAXY CORE";
   position: absolute;
