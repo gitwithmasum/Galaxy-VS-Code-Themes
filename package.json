@@ -1,0 +1,22 @@
+{
+  "name": "masum-galaxy-future-code",
+  "displayName": "Masum Galaxy // Future Code — Galaxy Cockpit",
+  "description": "Futuristic robotic VS Code theme with an optional 40-second animated solar-system cockpit: 8 planets, Sun, Moon and a subtle Masum Billah signature.",
+  "version": "2.0.0",
+  "publisher": "gitwithmasum",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Masum Galaxy // Future Code",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-galaxy-color-theme.json"
+      }
+    ]
+  }
+}
