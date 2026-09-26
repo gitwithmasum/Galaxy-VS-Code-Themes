@@ -1,5 +1,5 @@
-/* MASUM GALAXY // Ultimate Galaxy Cockpit v8
-   galaxy.js injects the animated SVG. This file handles readability + sci-fi chrome. */
+/* MASUM GALAXY // Ultimate Galaxy Cockpit v8.1
+   Animated galaxy + futuristic editor chrome with native-safe popup/menu layers. */
 
 .monaco-workbench {
   background: #01030a !important;
@@ -126,17 +126,42 @@
   backdrop-filter: blur(10px);
 }
 
-.monaco-menu-container,
+/* IMPORTANT: native popup/menu safety layer.
+   Keep these above every editor/HUD layer and avoid backdrop-filter on the
+   positioning container, which can break VS Code menu rendering. */
 .context-view,
+.monaco-menu-container,
+.monaco-workbench .context-view {
+  z-index: 100000 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
 .context-view .monaco-menu,
+.monaco-menu,
 .quick-input-widget,
 .monaco-hover,
 .monaco-editor-hover,
 .notifications-center,
 .notification-toast {
-  background-color: rgba(5,10,25,.97) !important;
-  backdrop-filter: blur(16px) saturate(1.08);
-  border-color: rgba(76,232,255,.1) !important;
+  z-index: 100001 !important;
+  background-color: var(--vscode-menu-background, #111827) !important;
+  color: var(--vscode-menu-foreground, #e6f7ff) !important;
+  border-color: rgba(76,232,255,.13) !important;
+  box-shadow: 0 10px 35px rgba(0,0,0,.45) !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Keep menu/list rows fully readable and native-sized. */
+.context-view .monaco-menu .monaco-action-bar,
+.context-view .monaco-menu .actions-container,
+.context-view .monaco-menu .action-item,
+.context-view .monaco-menu .action-menu-item,
+.quick-input-widget .monaco-list,
+.quick-input-widget .monaco-list-row {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Very subtle HUD accents. */
