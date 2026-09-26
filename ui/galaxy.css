@@ -1,21 +1,57 @@
-/* MASUM GALAXY // Galaxy Cockpit v6
-   Direct background on Monaco's visible overflow guard. */
+/* MASUM GALAXY // Galaxy Cockpit v7
+   galaxy.js injects the animated SVG into each editor group.
+   This CSS only handles layering, readability, and futuristic chrome. */
 
-.monaco-workbench { background: #01030a !important; }
-
-/* Put the animated galaxy directly on the visible editor surface. */
-.monaco-workbench .part.editor .monaco-editor .overflow-guard {
-  position: relative !important;
-  background-color: #020612 !important;
-  background-image:
-    linear-gradient(rgba(1,3,12,.44), rgba(1,3,12,.58)),
-    url("file:///D:/OneDrive/Web%20Development/Galaxy-VS-Code-Themes/assets/galaxy-cockpit.svg") !important;
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
+.monaco-workbench {
+  background: #01030a !important;
 }
 
-/* Remove Monaco's opaque child paints so the background can show through. */
+.monaco-workbench .part.editor .editor-group-container {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  background: #01030a !important;
+}
+
+/* JS-injected galaxy visual layer. */
+.monaco-workbench .part.editor .masum-galaxy-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .66;
+  background: #01030a;
+}
+
+.monaco-workbench .part.editor .masum-galaxy-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 48%, rgba(4,8,20,.06), rgba(1,3,12,.18) 38%, rgba(1,3,12,.52) 100%),
+    linear-gradient(rgba(1,3,12,.18), rgba(1,3,12,.38));
+  backdrop-filter: blur(1.2px);
+}
+
+.monaco-workbench .part.editor .masum-galaxy-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: saturate(.9) brightness(.82) contrast(.98);
+}
+
+/* Actual code surfaces stay above the galaxy and mostly transparent. */
+.monaco-workbench .part.editor .editor-group-container > :not(.masum-galaxy-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.monaco-workbench .part.editor .editor-container,
+.monaco-workbench .part.editor .editor-instance,
+.monaco-workbench .part.editor .monaco-editor,
+.monaco-workbench .part.editor .monaco-editor .overflow-guard,
 .monaco-workbench .part.editor .monaco-editor-background,
 .monaco-workbench .part.editor .monaco-editor .margin,
 .monaco-workbench .part.editor .monaco-editor .monaco-scrollable-element,
@@ -28,15 +64,12 @@
   background-image: none !important;
 }
 
-/* Keep surrounding editor containers dark but non-opaque over the canvas. */
-.monaco-workbench .part.editor .editor-group-container,
-.monaco-workbench .part.editor .editor-container,
-.monaco-workbench .part.editor .editor-instance,
-.monaco-workbench .part.editor .monaco-editor {
-  background-color: transparent !important;
+/* A subtle dark veil directly behind code keeps readability excellent. */
+.monaco-workbench .part.editor .monaco-editor .overflow-guard {
+  background: rgba(1,4,14,.28) !important;
 }
 
-/* Stable futuristic chrome. */
+/* Stable glass chrome. */
 .monaco-workbench .part.sidebar,
 .monaco-workbench .part.auxiliarybar,
 .monaco-workbench .part.panel {
@@ -70,6 +103,7 @@
   box-shadow: 0 0 10px rgba(83,239,255,.75);
 }
 
+/* Almost-hidden signature. */
 .monaco-workbench .part.editor::after {
   content: "MASUM BILLAH  //  GALAXY CORE";
   position: absolute;
