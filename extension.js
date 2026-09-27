@@ -3,6 +3,7 @@
 const vscode = require('vscode');
 
 const IMPORTS_KEY = 'vscode_custom_css.imports';
+const LOADER_EXTENSION_ID = 'be5invis.vscode-custom-css';
 const LOADER_RELOAD_COMMAND = 'extension.updateCustomCSS';
 
 function cockpitUris(context) {
@@ -26,12 +27,28 @@ async function writeImports(context, install) {
   const current = config.get(IMPORTS_KEY, []);
   const safeCurrent = Array.isArray(current) ? current.filter((item) => typeof item === 'string') : [];
   const withoutOldGalaxyImports = safeCurrent.filter((item) => !isMasumGalaxyImport(item));
-  const next = install
-    ? [...withoutOldGalaxyImports, ...cockpitUris(context)]
-    : withoutOldGalaxyImports;
-
+  const next = install ? [...withoutOldGalaxyImports, ...cockpitUris(context)] : withoutOldGalaxyImports;
   await config.update(IMPORTS_KEY, next, vscode.ConfigurationTarget.Global);
-  return next;
+}
+
+async function ensureLoaderInstalled() {
+  if (vscode.extensions.getExtension(LOADER_EXTENSION_ID)) return true;
+
+  const choice = await vscode.window.showInformationMessage(
+    'The animated cockpit uses the optional “Custom CSS and JS Loader” extension. The normal Masum Galaxy color theme works without it.',
+    'Install Loader',
+    'Cancel'
+  );
+
+  if (choice !== 'Install Loader') return false;
+
+  try {
+    await vscode.commands.executeCommand('workbench.extensions.installExtension', LOADER_EXTENSION_ID);
+    return true;
+  } catch (error) {
+    vscode.window.showErrorMessage('Could not install Custom CSS and JS Loader automatically. Search for “Custom CSS and JS Loader” in Extensions and install it manually.');
+    return false;
+  }
 }
 
 async function reloadLoader() {
@@ -44,9 +61,12 @@ async function reloadLoader() {
 }
 
 async function installCockpit(context) {
+  const ready = await ensureLoaderInstalled();
+  if (!ready) return;
+
   await writeImports(context, true);
   const selection = await vscode.window.showInformationMessage(
-    'Masum Galaxy animated cockpit is configured. Custom CSS and JS Loader must reload VS Code\'s workbench to apply it.',
+    'Masum Galaxy animated cockpit is configured. Reload Custom CSS/JS to apply it.',
     'Reload Custom CSS/JS',
     'Later'
   );
@@ -62,7 +82,7 @@ async function installCockpit(context) {
 async function removeCockpit(context) {
   await writeImports(context, false);
   const selection = await vscode.window.showInformationMessage(
-    'Masum Galaxy animated cockpit imports were removed. Reload Custom CSS/JS to restore the normal VS Code workbench.',
+    'Masum Galaxy animated cockpit imports were removed. Reload Custom CSS/JS to restore the normal workbench.',
     'Reload Custom CSS/JS',
     'Later'
   );
@@ -82,9 +102,7 @@ async function migrateOldImports(context) {
 
   const desired = cockpitUris(context);
   const hasCurrent = desired.every((uri) => current.includes(uri));
-  if (hasCurrent) return;
-
-  await writeImports(context, true);
+  if (!hasCurrent) await writeImports(context, true);
 }
 
 function activate(context) {
@@ -92,9 +110,11 @@ function activate(context) {
     vscode.commands.registerCommand('masumGalaxy.installCockpit', () => installCockpit(context)),
     vscode.commands.registerCommand('masumGalaxy.removeCockpit', () => removeCockpit(context)),
     vscode.commands.registerCommand('masumGalaxy.reloadCockpit', async () => {
+      const ready = await ensureLoaderInstalled();
+      if (!ready) return;
       const triggered = await reloadLoader();
       if (!triggered) {
-        vscode.window.showWarningMessage('Custom CSS and JS Loader is not ready. Make sure be5invis.vscode-custom-css is installed, then run its reload command.');
+        vscode.window.showWarningMessage('Run “Reload Custom CSS and JS” from the Command Palette.');
       }
     })
   );
