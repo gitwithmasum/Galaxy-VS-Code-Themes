@@ -1,6 +1,6 @@
 # Publishing Masum Galaxy to the VS Code Marketplace
 
-This repository is prepared for the Visual Studio Code Marketplace. The remaining account-level step must be completed by the publisher account owner because Marketplace publishing requires Microsoft/Azure DevOps authentication.
+This repository is prepared for the Visual Studio Code Marketplace. The only steps that still require the publisher account owner are creating/confirming the Marketplace publisher and authorizing the repository for trusted publishing.
 
 ## 1. Create or confirm the publisher
 
@@ -14,17 +14,22 @@ Create a Visual Studio Marketplace publisher with the ID **gitwithmasum**, or ch
 
 Official guide: https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
-## 2. Install packaging tools
+## 2. Use Node.js 22 or newer
+
+The repository uses `@vscode/vsce` 4.x, whose current requirement is Node.js 22 or newer.
+
+Check with:
+
+```bash
+node --version
+```
+
+## 3. Install dependencies and validate
 
 From the repository root:
 
 ```bash
 npm install
-```
-
-## 3. Validate and package locally
-
-```bash
 npx vsce ls
 npx vsce package
 ```
@@ -35,11 +40,31 @@ The generated file should be similar to:
 masum-galaxy-future-code-3.0.0.vsix
 ```
 
-Install that VSIX locally and test both the normal theme and the animated cockpit before publishing.
+Install the VSIX locally and test both the normal theme and the optional animated cockpit before publishing.
 
-## 4. Authenticate and publish
+## 4. Recommended publishing setup: trusted publishing with OIDC
 
-For a manual first publish, follow the current official authentication steps in the VS Code publishing guide, then run:
+This repository includes:
+
+```text
+.github/workflows/publish-marketplace.yml
+```
+
+It publishes with:
+
+```bash
+npx @vscode/vsce publish --oidc
+```
+
+and requests GitHub's short-lived OIDC token instead of storing a Marketplace PAT in repository secrets.
+
+Before running the workflow, configure a **trusted publishing policy** for this repository/workflow in the Visual Studio Marketplace publisher settings. After that, open the GitHub repository's **Actions** tab, select **Publish to VS Code Marketplace**, and run the workflow manually.
+
+This is the preferred long-term setup because Microsoft is moving away from global Azure DevOps PAT-based publishing.
+
+## 5. Manual publishing fallback
+
+For a manual first publish, follow the current official VS Code publishing authentication instructions, then run:
 
 ```bash
 npx vsce publish
@@ -53,27 +78,31 @@ gitwithmasum.masum-galaxy-future-code
 
 provided that the publisher ID remains `gitwithmasum`.
 
-## Authentication note for late 2026
+## 6. Package-only GitHub workflow
 
-VS Code Marketplace services use Azure DevOps. Microsoft states that global Azure DevOps Personal Access Tokens are retired on **December 1, 2026** and recommends Microsoft Entra ID for secure automated publishing. For any long-term CI publishing workflow, follow the latest official Entra-based publishing guidance rather than building a new permanent workflow around a global PAT.
+The repository also includes:
 
-## 5. After publishing
+```text
+.github/workflows/package-vsix.yml
+```
 
-- Open the Marketplace listing and confirm the icon, description, README, changelog and repository links render correctly.
-- Install the extension from the Marketplace in a clean VS Code profile.
-- Test `Masum Galaxy: Install Animated Cockpit`.
-- Confirm the optional Custom CSS and JS Loader flow is clearly disclosed.
-- Bump the SemVer version in `package.json` before every later release.
+Run it manually, or push a `v*` tag, to create a downloadable VSIX artifact without publishing anything to the Marketplace.
 
-## Release checklist
+## 7. Release checklist
 
+- Confirm Node.js 22+
 - `npm install`
 - `npx vsce ls`
 - `npx vsce package`
 - Install generated VSIX and test
 - Confirm normal theme works without Custom CSS
 - Confirm animated cockpit install/reload/remove commands work
-- Confirm menus, command palette and popups remain readable
+- Confirm menus, Command Palette, tooltips and popups remain readable
 - Update `CHANGELOG.md`
-- Bump `version`
-- Publish with the official current authentication method
+- Bump the SemVer `version` in `package.json`
+- Run the OIDC Marketplace publish workflow
+- Install the Marketplace version in a clean VS Code profile
+
+## Important Marketplace packaging note
+
+The repository contains SVG design assets for development/reference, but `.vscodeignore` excludes `assets/**` from the published VSIX. The Marketplace package uses the PNG icon at `images/icon.png` and the cockpit animation is embedded in `ui/galaxy.js`.
