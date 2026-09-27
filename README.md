@@ -1,44 +1,89 @@
-# MASUM GALAXY // FUTURE CODE — v2 Galaxy Cockpit
+# Masum Galaxy // Future Code
 
-A dark robotic VS Code theme by **Masum Billah**, designed for readable long coding sessions with an optional animated galaxy cockpit.
+![Masum Galaxy icon](images/icon.png)
 
-## Galaxy Cockpit
-- 8-planet loop: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
-- Each planetary focus lasts 5 seconds; the complete loop is 40 seconds
-- Ambient Sun + Moon, stars, nebula haze and faint HUD geometry
-- Heavy dark overlay / blur-style rendering keeps code dominant
+A futuristic robotic dark theme for Visual Studio Code by **Masum Billah**. The core theme is a normal VS Code color theme; the optional **Galaxy Cockpit** adds an animated solar-system background, HUD effects, glass panels and robotic glow.
+
+## Highlights
+
+- Neon cyan / violet robotic syntax tuned for dark environments
+- Animated 8-planet loop: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune
+- Each planet scene lasts about 5 seconds
+- Ambient Sun, Moon, stars, nebula drift, orbit lines and HUD scan effects
+- Glass-style sidebar / panel treatment
+- Futuristic active-line and cursor glow
 - Tiny `MASUM BILLAH // GALAXY CORE` signature
-- Neon robotic syntax and glowing cursor
-- Glass-like editor, sidebar and terminal surfaces
+- The animated layer can be removed without removing the normal theme
 
-## Install the color theme
-1. Clone or download this repository.
-2. Open the project folder in VS Code.
-3. Run `npm install -g @vscode/vsce` if `vsce` is not installed.
-4. Run `vsce package`.
-5. In VS Code open **Extensions → ... → Install from VSIX...** and choose the generated `.vsix`.
-6. Select **Masum Galaxy // Future Code** from **Preferences: Color Theme**.
+## Install from VS Code Marketplace
 
-## Enable the animated cockpit (optional / experimental)
-VS Code's official theme API does not permit animated editor backgrounds. `ui/galaxy.css` is therefore an optional custom-CSS layer and needs a compatible, trusted custom-CSS loader. Point that loader to `ui/galaxy.css`, enable it, then restart/reload VS Code.
+1. Open **Extensions** with `Ctrl+Shift+X`.
+2. Search for **Masum Galaxy // Future Code**.
+3. Install it.
+4. Open the Command Palette with `Ctrl+Shift+P`.
+5. Run **Preferences: Color Theme** and choose **Masum Galaxy // Future Code**.
 
-> Custom CSS modifies VS Code's workbench outside the official theme API. VS Code may display a modified/corrupt-installation warning after it is enabled, and a VS Code update can require re-enabling it. Keep the normal color theme installed as the safe fallback.
+The normal theme works immediately and uses only the standard VS Code theme API.
 
-## Performance / focus
-If animation ever distracts you, disable only the custom CSS layer. The robotic color theme remains fully usable.
+## Enable the animated Galaxy Cockpit
+
+The animated background is optional because VS Code's official theme API does not support arbitrary animated workbench backgrounds.
+
+1. Open the Command Palette.
+2. Run **Masum Galaxy: Install Animated Cockpit**.
+3. If **Custom CSS and JS Loader** is not installed, Masum Galaxy will offer to install it.
+4. Choose **Reload Custom CSS/JS** when prompted.
+5. Restart VS Code if requested.
+
+On Windows, the Custom CSS and JS Loader may require VS Code to run with Administrator permission when applying or removing its workbench modification.
+
+> **Important:** the optional cockpit uses `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API. VS Code can therefore show a modified/corrupt-installation warning, and after a VS Code update the cockpit may need to be reloaded. The normal Masum Galaxy color theme is unaffected.
+
+## Commands
+
+- `Masum Galaxy: Install Animated Cockpit`
+- `Masum Galaxy: Reload Animated Cockpit`
+- `Masum Galaxy: Remove Animated Cockpit`
+
+## Performance and focus
+
+The cockpit is intentionally dimmed so code stays dominant. If you prefer maximum focus or lower GPU usage, run **Masum Galaxy: Remove Animated Cockpit**. The color theme remains installed.
+
+## Local development
+
+```bash
+npm install
+npm run package
+```
+
+This produces a `.vsix` package that can be installed from **Extensions → ... → Install from VSIX...**.
 
 ## Project structure
+
 ```text
-assets/
-  galaxy-cockpit.svg
-  solar-system.svg
+images/
+  icon.png
 themes/
   masum-galaxy-color-theme.json
 ui/
   galaxy.css
+  galaxy.js
+extension.js
 package.json
 README.md
+CHANGELOG.md
+SUPPORT.md
+LICENSE
 ```
 
+## Support
+
+Use the repository issue tracker for bugs and feature requests. See [SUPPORT.md](SUPPORT.md) for the information that helps diagnose visual problems.
+
+## License
+
+MIT License.
+
 ## Author
+
 **Masum Billah** — `gitwithmasum`
