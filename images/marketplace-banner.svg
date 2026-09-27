@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Masum Galaxy Future Code Marketplace banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset=".52" stop-color="#06112b"/>
+      <stop offset="1" stop-color="#10062b"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff7c2"/>
+      <stop offset=".32" stop-color="#ffd258"/>
+      <stop offset="1" stop-color="#ff6a00"/>
+    </radialGradient>
+    <linearGradient id="planet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2955a5"/>
+      <stop offset=".6" stop-color="#14275d"/>
+      <stop offset="1" stop-color="#09112d"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="10"/></filter>
+    <pattern id="grid" width="80" height="60" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V60" fill="none" stroke="#2cf0ff" stroke-opacity=".18" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="24" fill="url(#grid)"/>
+  <g opacity=".75" fill="#b9f7ff">
+    <circle cx="47" cy="38" r="2"/><circle cx="116" cy="94" r="1.5"/><circle cx="212" cy="43" r="1.8"/>
+    <circle cx="315" cy="122" r="1.4"/><circle cx="392" cy="72" r="2"/><circle cx="488" cy="158" r="1.3"/>
+    <circle cx="556" cy="53" r="1.6"/><circle cx="688" cy="99" r="1.5"/><circle cx="742" cy="44" r="2"/>
+    <circle cx="1084" cy="322" r="1.8"/><circle cx="1018" cy="71" r="1.3"/><circle cx="1148" cy="104" r="1.5"/>
+  </g>
+  <ellipse cx="890" cy="235" rx="228" ry="53" fill="none" stroke="#49efff" stroke-width="8" opacity=".75" transform="rotate(-7 890 235)"/>
+  <ellipse cx="890" cy="235" rx="254" ry="74" fill="none" stroke="#7b61ff" stroke-width="2" opacity=".38" transform="rotate(-7 890 235)"/>
+  <circle cx="890" cy="232" r="140" fill="#1e4c93" opacity=".3" filter="url(#glow)"/>
+  <circle cx="890" cy="232" r="124" fill="url(#planet)" stroke="#57efff" stroke-width="3"/>
+  <path d="M780 212Q892 246 1000 212M780 253Q892 284 1000 253" fill="none" stroke="#52d9ff" stroke-width="6" opacity=".28"/>
+  <circle cx="1094" cy="72" r="38" fill="#ff7a16" opacity=".28" filter="url(#glow)"/>
+  <circle cx="1094" cy="72" r="27" fill="url(#sun)"/>
+  <path d="M36 78V34h44M1120 34h44v44M36 342v44h44M1120 386h44v-44" fill="none" stroke="#57efff" stroke-width="2" opacity=".55"/>
+  <text x="72" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="70" font-weight="800" fill="#71f6ff" letter-spacing="2">MASUM GALAXY</text>
+  <text x="74" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#a78bfa" letter-spacing="4">FUTURE CODE</text>
+  <text x="76" y="255" font-family="Consolas, monospace" font-size="17" fill="#b9d8ff" opacity=".9">FUTURISTIC ROBOTIC VS CODE THEME</text>
+  <text x="76" y="300" font-family="Consolas, monospace" font-size="14" fill="#78f4ff" opacity=".86">8 PLANETS  •  SUN  •  MOON  •  NEBULA  •  HUD  •  NEON SYNTAX</text>
+  <text x="76" y="346" font-family="Consolas, monospace" font-size="12" fill="#8ba8cb" letter-spacing="2">GALAXY COCKPIT // OPTIONAL ANIMATED LAYER</text>
+  <text x="1124" y="398" text-anchor="end" font-family="Consolas, monospace" font-size="9" fill="#79efff" opacity=".28" letter-spacing="2">MASUM BILLAH // GALAXY CORE</text>
+</svg>
