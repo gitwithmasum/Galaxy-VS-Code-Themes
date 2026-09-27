@@ -1,17 +1,10 @@
 # Masum Galaxy // Future Code
 
-<p align="center">
-  <img src="images/icon.png" width="180" alt="Masum Galaxy // Future Code icon">
-</p>
+![Masum Galaxy // Future Code](images/marketplace-banner.png)
 
-<p align="center">
-  <strong>Futuristic robotic coding. Galaxy atmosphere. Code stays in focus.</strong>
-</p>
+**Futuristic robotic coding. Galaxy atmosphere. Code stays in focus.**
 
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/gitwithmasum.masum-galaxy-future-code?label=Marketplace&color=22d3ee)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/gitwithmasum.masum-galaxy-future-code?color=8b5cf6)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
-[![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/gitwithmasum.masum-galaxy-future-code?color=f59e0b)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](LICENSE)
+**Marketplace** · **Free** · **MIT** · **Optional Animated Cockpit**
 
 A futuristic robotic dark theme for Visual Studio Code by **Masum Billah**. The core extension is a normal VS Code color theme. The optional **Galaxy Cockpit** adds an animated solar-system background, HUD effects, glass panels, neon glow and a 40-second planet cycle.
 
@@ -94,24 +87,6 @@ npx.cmd vsce package
 ```
 
 The command produces a `.vsix` package that can be installed through **Extensions → ... → Install from VSIX...**.
-
-## Project structure
-
-```text
-images/
-  icon.png
-themes/
-  masum-galaxy-color-theme.json
-ui/
-  galaxy.css
-  galaxy.js
-extension.js
-package.json
-README.md
-CHANGELOG.md
-SUPPORT.md
-LICENSE
-```
 
 ## Support
 
