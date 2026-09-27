@@ -1,0 +1,9 @@
+.git/**
+.github/**
+.vscode/**
+node_modules/**
+*.vsix
+assets/**
+PUBLISHING.md
+.DS_Store
+Thumbs.db
