@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Masum Galaxy editor preview">
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#020617"/><stop offset=".6" stop-color="#08132d"/><stop offset="1" stop-color="#12072c"/>
+    </linearGradient>
+    <linearGradient id="planet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5178c7"/><stop offset="1" stop-color="#172758"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1200" height="675" rx="18" fill="#050914"/>
+  <rect x="18" y="18" width="1164" height="42" rx="10" fill="#08101f"/>
+  <circle cx="43" cy="39" r="6" fill="#ff6b6b"/><circle cx="63" cy="39" r="6" fill="#ffd166"/><circle cx="83" cy="39" r="6" fill="#56e39f"/>
+  <text x="600" y="44" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="#8fdfff">MASUM GALAXY // FUTURE CODE</text>
+  <rect x="18" y="68" width="216" height="589" rx="10" fill="#050b18" stroke="#22d3ee" stroke-opacity=".15"/>
+  <text x="40" y="102" font-family="Consolas, monospace" font-size="14" fill="#6ee7ff">EXPLORER</text>
+  <g font-family="Consolas, monospace" font-size="13" fill="#91a9c7">
+    <text x="42" y="138">▾ Galaxy-VS-Code-Themes</text><text x="58" y="168">▾ themes</text><text x="75" y="198">masum-galaxy-color-theme.json</text>
+    <text x="58" y="228">▾ ui</text><text x="75" y="258">galaxy.css</text><text x="75" y="288">galaxy.js</text>
+    <text x="58" y="318">README.md</text><text x="58" y="348">package.json</text>
+  </g>
+  <rect x="246" y="68" width="936" height="589" rx="10" fill="url(#space)" stroke="#22d3ee" stroke-opacity=".16"/>
+  <ellipse cx="862" cy="345" rx="230" ry="94" fill="#6d28d9" opacity=".1" filter="url(#blur)"/>
+  <circle cx="999" cy="168" r="72" fill="#2b4e91" opacity=".28" filter="url(#blur)"/>
+  <circle cx="999" cy="168" r="58" fill="url(#planet)" opacity=".72"/>
+  <ellipse cx="999" cy="168" rx="102" ry="24" fill="none" stroke="#67e8ff" stroke-width="4" opacity=".44" transform="rotate(-12 999 168)"/>
+  <circle cx="1100" cy="108" r="24" fill="#ff8a24" opacity=".8"/><circle cx="337" cy="561" r="24" fill="#dce9ff" opacity=".33"/><circle cx="349" cy="553" r="24" fill="#020614" opacity=".9"/>
+  <g fill="#bdf7ff" opacity=".5"><circle cx="410" cy="115" r="1.5"/><circle cx="748" cy="97" r="1.4"/><circle cx="901" cy="570" r="1.2"/><circle cx="1070" cy="423" r="1.4"/><circle cx="574" cy="528" r="1.1"/></g>
+  <rect x="270" y="92" width="888" height="541" fill="#01040e" opacity=".24"/>
+  <g font-family="Consolas, monospace" font-size="17">
+    <text x="300" y="145" fill="#7dd3fc">const</text><text x="356" y="145" fill="#e9d5ff">galaxy</text><text x="420" y="145" fill="#c4b5fd"> = </text><text x="452" y="145" fill="#86efac">"future-code"</text><text x="585" y="145" fill="#cbd5e1">;</text>
+    <text x="300" y="185" fill="#f0abfc">function</text><text x="392" y="185" fill="#67e8f9">launchCockpit</text><text x="516" y="185" fill="#cbd5e1">() {</text>
+    <text x="330" y="225" fill="#7dd3fc">return</text><text x="390" y="225" fill="#cbd5e1"> {</text>
+    <text x="360" y="265" fill="#f9a8d4">planets</text><text x="433" y="265" fill="#cbd5e1">:</text><text x="452" y="265" fill="#fde68a">8</text><text x="465" y="265" fill="#cbd5e1">,</text>
+    <text x="360" y="305" fill="#f9a8d4">cycle</text><text x="416" y="305" fill="#cbd5e1">:</text><text x="437" y="305" fill="#fde68a">5</text><text x="450" y="305" fill="#86efac">_seconds</text><text x="536" y="305" fill="#cbd5e1">,</text>
+    <text x="360" y="345" fill="#f9a8d4">mode</text><text x="408" y="345" fill="#cbd5e1">:</text><text x="429" y="345" fill="#86efac">"robotic"</text><text x="512" y="345" fill="#cbd5e1">,</text>
+    <text x="360" y="385" fill="#f9a8d4">hud</text><text x="397" y="385" fill="#cbd5e1">:</text><text x="418" y="385" fill="#fde68a">true</text>
+    <text x="330" y="425" fill="#cbd5e1"> };</text><text x="300" y="465" fill="#cbd5e1">}</text>
+    <text x="300" y="525" fill="#64748b">// MASUM BILLAH // GALAXY CORE</text>
+  </g>
+  <rect x="270" y="154" width="5" height="28" rx="2" fill="#67e8f9" opacity=".85"/>
+  <text x="1140" y="625" text-anchor="end" font-family="Consolas, monospace" font-size="9" fill="#67e8f9" opacity=".2" letter-spacing="2">SYS // GALAXY COCKPIT</text>
+</svg>
