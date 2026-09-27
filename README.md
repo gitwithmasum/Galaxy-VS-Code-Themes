@@ -1,6 +1,8 @@
 # Masum Galaxy // Future Code
 
-![Masum Galaxy // Future Code](images/marketplace-banner.png)
+<p align="center">
+  <img src="images/marketplace-hero.jpg" alt="Masum Galaxy // Future Code — futuristic galaxy cockpit banner" width="100%">
+</p>
 
 **Futuristic robotic coding. Galaxy atmosphere. Code stays in focus.**
 

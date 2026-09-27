@@ -2,6 +2,12 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.0.3
+
+- Replaced the extension icon with the selected futuristic square **MG** astronaut-galaxy logo.
+- Added the selected **MASUM GALAXY // FUTURE CODE** artwork as the README / Marketplace hero banner.
+- Kept the icon and hero as separate brand assets so each stays clear at its intended size.
+
 ## 3.0.2
 
 - Replaced retired Marketplace badges with clean static metadata text.
