@@ -2,10 +2,17 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.0.2
+
+- Replaced retired Marketplace badges with clean static metadata text.
+- Added a Marketplace-safe PNG hero banner for a stronger extension page presentation.
+- Simplified the README so the visual hierarchy is cleaner and easier to scan.
+- Kept all Marketplace images compliant with `vsce` publishing restrictions.
+
 ## 3.0.1
 
 - Added a premium Marketplace hero banner and futuristic editor preview artwork.
-- Reworked the Marketplace README with badges, clearer install steps and stronger feature presentation.
+- Reworked the Marketplace README with clearer install steps and stronger feature presentation.
 - Added direct Marketplace, repository and support links.
 - Clarified the difference between the safe standard color theme and the optional animated cockpit layer.
 - Added Windows PowerShell packaging guidance using `npm.cmd` and `npx.cmd`.
