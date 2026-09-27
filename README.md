@@ -1,29 +1,43 @@
 # Masum Galaxy // Future Code
 
-![Masum Galaxy icon](images/icon.png)
+![Masum Galaxy // Future Code](images/marketplace-banner.svg)
 
-A futuristic robotic dark theme for Visual Studio Code by **Masum Billah**. The core theme is a normal VS Code color theme; the optional **Galaxy Cockpit** adds an animated solar-system background, HUD effects, glass panels and robotic glow.
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/gitwithmasum.masum-galaxy-future-code?label=Marketplace&color=22d3ee)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/gitwithmasum.masum-galaxy-future-code?color=8b5cf6)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
+[![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/gitwithmasum.masum-galaxy-future-code?color=f59e0b)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](LICENSE)
 
-## Highlights
+A futuristic robotic dark theme for Visual Studio Code by **Masum Billah**. The core extension is a normal VS Code color theme. The optional **Galaxy Cockpit** adds an animated solar-system background, HUD effects, glass panels, neon glow and a 40-second planet cycle.
 
-- Neon cyan / violet robotic syntax tuned for dark environments
-- Animated 8-planet loop: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune
-- Each planet scene lasts about 5 seconds
-- Ambient Sun, Moon, stars, nebula drift, orbit lines and HUD scan effects
-- Glass-style sidebar / panel treatment
-- Futuristic active-line and cursor glow
-- Tiny `MASUM BILLAH // GALAXY CORE` signature
-- The animated layer can be removed without removing the normal theme
+> **Marketplace:** [Install Masum Galaxy // Future Code](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
 
-## Install from VS Code Marketplace
+## Preview
+
+![Masum Galaxy editor preview](images/editor-preview.svg)
+
+The visual system is designed around one rule: **the galaxy should look cinematic without fighting the code**. Background effects are dimmed, softened and kept behind a high-contrast robotic syntax palette.
+
+## Why Masum Galaxy
+
+- **Robotic neon syntax** — cyan, violet, blue and controlled accent colors tuned for dark environments.
+- **8-planet animated loop** — Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.
+- **5-second planet scenes** — the complete cycle lasts about 40 seconds.
+- **Solar ambience** — Sun, Moon, stars, nebula drift, orbit lines and HUD scan effects.
+- **Glass cockpit UI** — futuristic sidebar, panel, active-line and cursor treatments.
+- **Readable by design** — dark overlays keep code visually dominant during long sessions.
+- **Optional animation** — remove the cockpit at any time without uninstalling the color theme.
+- **Subtle signature** — `MASUM BILLAH // GALAXY CORE` stays nearly invisible while coding.
+
+## Quick install
 
 1. Open **Extensions** with `Ctrl+Shift+X`.
 2. Search for **Masum Galaxy // Future Code**.
-3. Install it.
+3. Click **Install**.
 4. Open the Command Palette with `Ctrl+Shift+P`.
-5. Run **Preferences: Color Theme** and choose **Masum Galaxy // Future Code**.
+5. Run **Preferences: Color Theme**.
+6. Select **Masum Galaxy // Future Code**.
 
-The normal theme works immediately and uses only the standard VS Code theme API.
+The normal theme works immediately through the standard VS Code theme API.
 
 ## Enable the animated Galaxy Cockpit
 
@@ -35,19 +49,31 @@ The animated background is optional because VS Code's official theme API does no
 4. Choose **Reload Custom CSS/JS** when prompted.
 5. Restart VS Code if requested.
 
-On Windows, the Custom CSS and JS Loader may require VS Code to run with Administrator permission when applying or removing its workbench modification.
+### Cockpit commands
 
-> **Important:** the optional cockpit uses `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API. VS Code can therefore show a modified/corrupt-installation warning, and after a VS Code update the cockpit may need to be reloaded. The normal Masum Galaxy color theme is unaffected.
+```text
+Masum Galaxy: Install Animated Cockpit
+Masum Galaxy: Reload Animated Cockpit
+Masum Galaxy: Remove Animated Cockpit
+```
 
-## Commands
+## Important note about the animated layer
 
-- `Masum Galaxy: Install Animated Cockpit`
-- `Masum Galaxy: Reload Animated Cockpit`
-- `Masum Galaxy: Remove Animated Cockpit`
+The optional cockpit uses `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API. VS Code may therefore show a modified/corrupt-installation warning, and after a VS Code update the cockpit may need to be reloaded.
 
-## Performance and focus
+The **normal Masum Galaxy color theme is unaffected** and can be used without the custom cockpit layer.
 
-The cockpit is intentionally dimmed so code stays dominant. If you prefer maximum focus or lower GPU usage, run **Masum Galaxy: Remove Animated Cockpit**. The color theme remains installed.
+On Windows, the Custom CSS and JS Loader may require VS Code to run with Administrator permission while applying or removing the workbench modification.
+
+## Focus and performance
+
+The cockpit is intentionally dimmed so code stays dominant. If you prefer maximum focus, lower GPU usage or a completely standard VS Code workbench, run:
+
+```text
+Masum Galaxy: Remove Animated Cockpit
+```
+
+The color theme remains installed and active.
 
 ## Local development
 
@@ -56,13 +82,22 @@ npm install
 npm run package
 ```
 
-This produces a `.vsix` package that can be installed from **Extensions → ... → Install from VSIX...**.
+On Windows PowerShell systems that block `npm.ps1`, use:
+
+```powershell
+npm.cmd install
+npx.cmd vsce package
+```
+
+The command produces a `.vsix` package that can be installed through **Extensions → ... → Install from VSIX...**.
 
 ## Project structure
 
 ```text
 images/
   icon.png
+  marketplace-banner.svg
+  editor-preview.svg
 themes/
   masum-galaxy-color-theme.json
 ui/
@@ -78,7 +113,13 @@ LICENSE
 
 ## Support
 
-Use the repository issue tracker for bugs and feature requests. See [SUPPORT.md](SUPPORT.md) for the information that helps diagnose visual problems.
+For visual bugs, installation problems or feature requests, use the [GitHub issue tracker](https://github.com/gitwithmasum/Galaxy-VS-Code-Themes/issues). See [SUPPORT.md](SUPPORT.md) for the information that helps diagnose rendering problems quickly.
+
+## Links
+
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
+- [GitHub Repository](https://github.com/gitwithmasum/Galaxy-VS-Code-Themes)
+- [Issue Tracker](https://github.com/gitwithmasum/Galaxy-VS-Code-Themes/issues)
 
 ## License
 
@@ -86,4 +127,4 @@ MIT License.
 
 ## Author
 
-**Masum Billah** — `gitwithmasum`
+**Masum Billah** — [gitwithmasum](https://github.com/gitwithmasum)
