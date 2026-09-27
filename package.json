@@ -50,10 +50,14 @@
   "extensionKind": [
     "ui"
   ],
-  "extensionDependencies": [
-    "be5invis.vscode-custom-css"
-  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
   "activationEvents": [
+    "onStartupFinished",
     "onCommand:masumGalaxy.installCockpit",
     "onCommand:masumGalaxy.removeCockpit",
     "onCommand:masumGalaxy.reloadCockpit"
