@@ -1,6 +1,12 @@
 # Masum Galaxy // Future Code
 
-![Masum Galaxy // Future Code](images/marketplace-banner.svg)
+<p align="center">
+  <img src="images/icon.png" width="180" alt="Masum Galaxy // Future Code icon">
+</p>
+
+<p align="center">
+  <strong>Futuristic robotic coding. Galaxy atmosphere. Code stays in focus.</strong>
+</p>
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/gitwithmasum.masum-galaxy-future-code?label=Marketplace&color=22d3ee)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/gitwithmasum.masum-galaxy-future-code?color=8b5cf6)](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
@@ -11,13 +17,11 @@ A futuristic robotic dark theme for Visual Studio Code by **Masum Billah**. The 
 
 > **Marketplace:** [Install Masum Galaxy // Future Code](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
 
-## Preview
+## Galaxy Cockpit
 
-![Masum Galaxy editor preview](images/editor-preview.svg)
+The visual system follows one rule: **the galaxy should look cinematic without fighting the code**. Background effects are dimmed, softened and kept behind a high-contrast robotic syntax palette.
 
-The visual system is designed around one rule: **the galaxy should look cinematic without fighting the code**. Background effects are dimmed, softened and kept behind a high-contrast robotic syntax palette.
-
-## Why Masum Galaxy
+### Highlights
 
 - **Robotic neon syntax** — cyan, violet, blue and controlled accent colors tuned for dark environments.
 - **8-planet animated loop** — Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.
@@ -96,8 +100,6 @@ The command produces a `.vsix` package that can be installed through **Extension
 ```text
 images/
   icon.png
-  marketplace-banner.svg
-  editor-preview.svg
 themes/
   masum-galaxy-color-theme.json
 ui/
