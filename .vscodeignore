@@ -4,6 +4,7 @@
 node_modules/**
 *.vsix
 assets/**
+images/*.svg
 PUBLISHING.md
 .DS_Store
 Thumbs.db
