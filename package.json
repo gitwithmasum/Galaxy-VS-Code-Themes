@@ -1,14 +1,62 @@
 {
   "name": "masum-galaxy-future-code",
-  "displayName": "Masum Galaxy // Future Code — Galaxy Cockpit",
-  "description": "Futuristic robotic VS Code theme with an optional 40-second animated solar-system cockpit: 8 planets, Sun, Moon and a subtle Masum Billah signature.",
-  "version": "2.0.0",
+  "displayName": "Masum Galaxy // Future Code",
+  "description": "A futuristic robotic VS Code theme with an optional animated galaxy cockpit featuring 8 planets, Sun, Moon, nebulae, HUD effects and neon syntax.",
+  "version": "3.0.0",
   "publisher": "gitwithmasum",
+  "author": {
+    "name": "Masum Billah",
+    "url": "https://github.com/gitwithmasum"
+  },
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.93.0"
   },
   "categories": [
-    "Themes"
+    "Themes",
+    "Visualization"
+  ],
+  "keywords": [
+    "galaxy",
+    "space",
+    "futuristic",
+    "robotic",
+    "cyberpunk",
+    "neon",
+    "dark theme",
+    "animated theme",
+    "solar system",
+    "planet",
+    "sci-fi",
+    "cockpit",
+    "hud",
+    "developer theme"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#020510",
+    "theme": "dark"
+  },
+  "pricing": "Free",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitwithmasum/Galaxy-VS-Code-Themes.git"
+  },
+  "homepage": "https://github.com/gitwithmasum/Galaxy-VS-Code-Themes#readme",
+  "bugs": {
+    "url": "https://github.com/gitwithmasum/Galaxy-VS-Code-Themes/issues"
+  },
+  "main": "./extension.js",
+  "extensionKind": [
+    "ui"
+  ],
+  "extensionDependencies": [
+    "be5invis.vscode-custom-css"
+  ],
+  "activationEvents": [
+    "onCommand:masumGalaxy.installCockpit",
+    "onCommand:masumGalaxy.removeCockpit",
+    "onCommand:masumGalaxy.reloadCockpit"
   ],
   "contributes": {
     "themes": [
@@ -17,6 +65,27 @@
         "uiTheme": "vs-dark",
         "path": "./themes/masum-galaxy-color-theme.json"
       }
+    ],
+    "commands": [
+      {
+        "command": "masumGalaxy.installCockpit",
+        "title": "Masum Galaxy: Install Animated Cockpit"
+      },
+      {
+        "command": "masumGalaxy.removeCockpit",
+        "title": "Masum Galaxy: Remove Animated Cockpit"
+      },
+      {
+        "command": "masumGalaxy.reloadCockpit",
+        "title": "Masum Galaxy: Reload Animated Cockpit"
+      }
     ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
   }
 }
