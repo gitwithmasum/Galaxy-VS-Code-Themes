@@ -1,117 +1,191 @@
 # Masum Galaxy // Future Code
 
 <p align="center">
-  <img src="images/marketplace-hero.jpg" alt="Masum Galaxy // Future Code — futuristic galaxy cockpit banner" width="100%">
+  <img src="images/marketplace-hero.jpg" alt="Masum Galaxy // Future Code — futuristic VS Code theme collection" width="100%">
 </p>
 
-**Futuristic robotic coding. Galaxy atmosphere. Cyber City neon rain. Code stays in focus.**
+**11 futuristic VS Code themes. One extension. One Theme Selector. Optional animated cinematic workbench modes.**
 
-**Marketplace** · **Free** · **MIT** · **Optional Animated Modes**
+**Marketplace** · **Free** · **MIT** · **Dark Themes** · **Optional Animated Modes**
 
-A futuristic VS Code theme collection by **Masum Billah**. Version 3.1 introduces a second complete mode: **Masum Cyber City // Neon Rain**, alongside the original Galaxy cockpit.
+**Masum Galaxy // Future Code** is a futuristic VS Code theme collection by **Masum Billah**. It combines readable developer-focused syntax palettes with optional animated workbench scenes inspired by space, AI, cyberpunk, Mars, deep ocean, aurora skies, mecha systems and solar energy.
 
 > **Marketplace:** [Install Masum Galaxy // Future Code](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
 
-## Available modes
+## 11 included themes
 
-### Masum Galaxy // Future Code
+| # | Theme | Visual direction |
+|---|---|---|
+| 1 | **Masum Galaxy // Future Code** | Solar-system cockpit, planets, stars, nebula and HUD |
+| 2 | **Masum Cyber City // Neon Rain** | Neon megacity, rain, holograms and cyberpunk traffic |
+| 3 | **Masum AI Core // Neural Engine** | Neural rings, AI nodes, data pulses and scanner grid |
+| 4 | **Masum Black Hole // Event Horizon** | Black hole, accretion disk, lens arcs and comet trails |
+| 5 | **Masum Quantum Grid // Q-Core** | Quantum lattice, glowing nodes and phase pulses |
+| 6 | **Masum Mars Colony // Red Frontier** | Mars base, rover, drone, domes and red frontier landscape |
+| 7 | **Masum Deep Ocean // Abyss Core** | Bioluminescent abyss, jellyfish, bubbles and deep-sea drone |
+| 8 | **Masum Aurora // Polar Light** | Northern lights, polar beams, moon, snow and icy mountains |
+| 9 | **Masum Mecha Core // Titan Reactor** | Titan reactor, mechanical rings, sparks and industrial HUD |
+| 10 | **Masum Orbital Station // Nexus One** | Earth orbit, space station, satellites and spacecraft traffic |
+| 11 | **Masum Solar Flare // Helios Core** | Sun, corona rings, solar-flare arcs and plasma particles |
 
-- Robotic cyan/violet syntax
-- 8 animated planets with 5-second scenes
-- Sun, Moon, nebula drift, stars and orbit lines
-- Glass cockpit UI and HUD scan effects
-- Subtle `MASUM BILLAH // GALAXY CORE` signature
+Every theme is designed around a dark coding surface with clear syntax contrast, visible text selection and practical readability.
 
-### Masum Cyber City // Neon Rain
+## Fastest way to switch themes
 
-- Futuristic neon megacity skyline
-- Animated cyan/purple rain
-- Hologram signage and light traffic
-- Slow fog drift and HUD scanner
-- Cyberpunk pink/cyan syntax palette
-- Subtle `MASUM BILLAH // NIGHT CITY CORE` signature
-
-Both animated modes are deliberately dimmed so the code remains visually dominant.
-
-## Quick install
-
-1. Open **Extensions** with `Ctrl+Shift+X`.
-2. Search for **Masum Galaxy // Future Code**.
-3. Click **Install**.
-4. Open the Command Palette with `Ctrl+Shift+P`.
-5. Select either **Masum Galaxy // Future Code** or **Masum Cyber City // Neon Rain** from **Preferences: Color Theme**.
-
-The normal color themes work immediately through the standard VS Code theme API.
-
-## Animated mode commands
-
-The animated workbench layer is optional because VS Code's official theme API does not support arbitrary animated workbench backgrounds.
+Open the Command Palette:
 
 ```text
-Masum Future Themes: Cyber City Mode
-Masum Future Themes: Galaxy Mode
-Masum Future Themes: Disable Animated Layer
-
-Masum Galaxy: Install Animated Cockpit
-Masum Galaxy: Reload Animated Cockpit
-Masum Galaxy: Remove Animated Cockpit
+Ctrl + Shift + P
 ```
-
-### Enable Cyber City
-
-1. Open `Ctrl+Shift+P`.
-2. Run **Masum Future Themes: Cyber City Mode**.
-3. Install **Custom CSS and JS Loader** if prompted.
-4. Choose **Reload Custom CSS/JS**.
-5. Restart VS Code if requested.
-
-The command automatically switches the color theme to **Masum Cyber City // Neon Rain** and replaces the Galaxy animated imports, so the two modes do not stack.
-
-### Switch back to Galaxy
 
 Run:
 
 ```text
-Masum Future Themes: Galaxy Mode
+Masum Future Themes: Open Theme Selector
 ```
 
-Then reload Custom CSS/JS when prompted.
+A single searchable menu will show all 11 animated modes plus **Disable Animated Layer**.
 
-## Important note about animated layers
-
-Animated modes use `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API. VS Code may therefore show a modified/corrupt-installation warning, and after a VS Code update the animated layer may need to be reloaded.
-
-The standard color themes are unaffected and can be used without the custom animated layer.
-
-On Windows, Custom CSS and JS Loader may require VS Code to run with Administrator permission while applying or removing workbench modifications.
-
-## Focus and performance
-
-If you want the normal VS Code workbench while keeping the selected Masum color theme, run:
+Choose a mode, then select:
 
 ```text
-Masum Future Themes: Disable Animated Layer
+Apply & Reload Window
 ```
 
-## Local development
+That is the recommended workflow for animated themes.
+
+## Standard color themes
+
+The extension also works as a normal VS Code color-theme pack without any custom loader.
+
+Open:
+
+```text
+Ctrl + K
+Ctrl + T
+```
+
+or:
+
+```text
+Ctrl + Shift + P
+→ Preferences: Color Theme
+```
+
+Then choose any **Masum** theme from the list.
+
+Standard color themes use the official VS Code theme API and work immediately.
+
+## Animated workbench modes
+
+The animated backgrounds are optional. VS Code's normal color-theme API cannot provide full animated workbench backgrounds, so these modes use the optional **Custom CSS and JS Loader** extension.
+
+The Theme Selector can activate any of these modes:
+
+```text
+Masum Galaxy // Future Code
+Masum Cyber City // Neon Rain
+Masum AI Core // Neural Engine
+Masum Black Hole // Event Horizon
+Masum Quantum Grid // Q-Core
+Masum Mars Colony // Red Frontier
+Masum Deep Ocean // Abyss Core
+Masum Aurora // Polar Light
+Masum Mecha Core // Titan Reactor
+Masum Orbital Station // Nexus One
+Masum Solar Flare // Helios Core
+```
+
+Direct commands remain available too, including Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora, Mecha Core, Orbital Station and Solar Flare mode commands.
+
+## Quick install
+
+1. Open **Extensions** with `Ctrl + Shift + X`.
+2. Search for **Masum Galaxy // Future Code**.
+3. Click **Install**.
+4. For a standard theme, use `Ctrl + K`, then `Ctrl + T`.
+5. For an animated theme, open `Ctrl + Shift + P` and run **Masum Future Themes: Open Theme Selector**.
+6. If prompted, install **Custom CSS and JS Loader**.
+7. Choose **Apply & Reload Window**.
+
+## Disable animation but keep the color theme
+
+Run:
+
+```text
+Masum Future Themes: Open Theme Selector
+```
+
+Then choose:
+
+```text
+Disable Animated Layer
+```
+
+The selected Masum color theme remains active while the animated workbench layer is removed.
+
+## Important note about Custom CSS and JS Loader
+
+Animated modes use `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API.
+
+Because of that:
+
+- VS Code may show a modified or corrupt-installation warning while animated CSS/JS is active.
+- After a VS Code update, the animated layer may need to be applied again.
+- On Windows, applying or removing custom CSS/JS may require running VS Code as Administrator.
+- Standard Masum color themes do **not** require the custom loader.
+
+## Local development and VSIX packaging
+
+Clone or open the repository, then run:
 
 ```bash
 npm install
 npm run package
 ```
 
-On Windows PowerShell systems that block `npm.ps1`, use:
+On Windows PowerShell systems where `npm.ps1` is blocked, use:
 
 ```powershell
 npm.cmd install
 npx.cmd vsce package
 ```
 
-The command produces a `.vsix` package that can be installed through **Extensions → ... → Install from VSIX...**.
+To install a locally packaged build:
+
+```powershell
+code --install-extension .\masum-galaxy-future-code-3.10.2.vsix --force
+```
+
+You can also install a `.vsix` manually from:
+
+```text
+Extensions → ... → Install from VSIX...
+```
+
+## Recommended workflow
+
+For everyday coding:
+
+```text
+Ctrl + Shift + P
+→ Masum Future Themes: Open Theme Selector
+→ Choose theme
+→ Apply & Reload Window
+```
+
+For a distraction-free workbench:
+
+```text
+Theme Selector
+→ Disable Animated Layer
+```
 
 ## Support
 
-For visual bugs, installation problems or feature requests, use the [GitHub issue tracker](https://github.com/gitwithmasum/Galaxy-VS-Code-Themes/issues). See [SUPPORT.md](SUPPORT.md) for the information that helps diagnose rendering problems quickly.
+For visual bugs, installation problems or feature requests, use the [GitHub issue tracker](https://github.com/gitwithmasum/Galaxy-VS-Code-Themes/issues).
+
+See [SUPPORT.md](SUPPORT.md) for useful diagnostic information when reporting a rendering issue.
 
 ## Links
 
