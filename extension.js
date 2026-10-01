@@ -86,6 +86,34 @@ async function reloadLoader() {
   }
 }
 
+async function reloadWindowNow() {
+  try {
+    await vscode.commands.executeCommand('workbench.action.reloadWindow');
+  } catch (error) {
+    vscode.window.showWarningMessage('Please reload the VS Code window manually to finish switching animated modes.');
+  }
+}
+
+async function finishModeSwitch(message) {
+  const choice = await vscode.window.showInformationMessage(
+    message,
+    'Apply & Reload Window',
+    'Later'
+  );
+
+  if (choice !== 'Apply & Reload Window') return;
+
+  const triggered = await reloadLoader();
+  if (!triggered) {
+    vscode.window.showWarningMessage('Run “Reload Custom CSS and JS” from the Command Palette, then reload the VS Code window. On Windows, VS Code may need Administrator permission.');
+    return;
+  }
+
+  // Each animated mode injects its own long-lived JS observer. A full workbench
+  // reload is required so the previous mode cannot keep re-inserting its layer.
+  await reloadWindowNow();
+}
+
 async function enableMode(context, modeKey) {
   const mode = MODES[modeKey];
   if (!mode) return;
@@ -93,6 +121,8 @@ async function enableMode(context, modeKey) {
   const ready = await ensureLoaderInstalled();
   if (!ready) return;
 
+  // Replace the previous animated imports first, then switch the normal VS Code
+  // color theme immediately. The window reload below applies the new cockpit JS.
   await setImports(context, modeKey);
   await vscode.workspace.getConfiguration('workbench').update(
     'colorTheme',
@@ -100,34 +130,16 @@ async function enableMode(context, modeKey) {
     vscode.ConfigurationTarget.Global
   );
 
-  const selection = await vscode.window.showInformationMessage(
-    `${mode.label} is configured. Reload Custom CSS/JS to apply the animated mode.`,
-    'Reload Custom CSS/JS',
-    'Later'
+  await finishModeSwitch(
+    `${mode.label} is selected. Apply Custom CSS/JS and reload the VS Code window to switch the animated background completely.`
   );
-
-  if (selection === 'Reload Custom CSS/JS') {
-    const triggered = await reloadLoader();
-    if (!triggered) {
-      vscode.window.showWarningMessage('Run “Reload Custom CSS and JS” from the Command Palette. On Windows, VS Code may need Administrator permission.');
-    }
-  }
 }
 
 async function removeAnimatedLayer(context) {
   await setImports(context, null);
-  const selection = await vscode.window.showInformationMessage(
-    'Masum Future Themes animated layer was removed. The selected color theme will remain active.',
-    'Reload Custom CSS/JS',
-    'Later'
+  await finishModeSwitch(
+    'Masum Future Themes animated imports were removed. Apply the change and reload the VS Code window; the selected color theme will remain active.'
   );
-
-  if (selection === 'Reload Custom CSS/JS') {
-    const triggered = await reloadLoader();
-    if (!triggered) {
-      vscode.window.showWarningMessage('Run “Reload Custom CSS and JS” from the Command Palette.');
-    }
-  }
 }
 
 async function migrateOldImports(context) {
@@ -156,7 +168,11 @@ function activate(context) {
       const ready = await ensureLoaderInstalled();
       if (!ready) return;
       const triggered = await reloadLoader();
-      if (!triggered) vscode.window.showWarningMessage('Run “Reload Custom CSS and JS” from the Command Palette.');
+      if (!triggered) {
+        vscode.window.showWarningMessage('Run “Reload Custom CSS and JS” from the Command Palette.');
+        return;
+      }
+      await reloadWindowNow();
     }),
     vscode.commands.registerCommand('masumFutureThemes.cyberCityMode', () => enableMode(context, 'cyberCity')),
     vscode.commands.registerCommand('masumFutureThemes.aiCoreMode', () => enableMode(context, 'aiCore')),
