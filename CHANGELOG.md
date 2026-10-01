@@ -2,6 +2,13 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.1.3
+
+- Improved selected-code visibility in both **Cyber City** and **Galaxy** themes.
+- Added a brighter cyan selection background with white selected text so copied/selected code is obvious at a glance.
+- Added clearer inactive-selection, selection-highlight and find-match colors for better navigation in busy animated backgrounds.
+- Kept the selection treatment readable without hiding the syntax underneath.
+
 ## 3.1.2
 
 - Rebalanced Cyber City after the high-visibility pass made code too hard to read.
