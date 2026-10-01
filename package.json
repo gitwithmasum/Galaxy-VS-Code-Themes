@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core and Black Hole animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.3.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole and Quantum Grid animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.4.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -26,6 +26,9 @@
     "black hole",
     "event horizon",
     "accretion disk",
+    "quantum grid",
+    "q-core",
+    "quantum",
     "space",
     "futuristic",
     "robotic",
@@ -72,6 +75,7 @@
     "onCommand:masumFutureThemes.cyberCityMode",
     "onCommand:masumFutureThemes.aiCoreMode",
     "onCommand:masumFutureThemes.blackHoleMode",
+    "onCommand:masumFutureThemes.quantumGridMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -96,6 +100,11 @@
         "label": "Masum Black Hole // Event Horizon",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-black-hole-theme.json"
+      },
+      {
+        "label": "Masum Quantum Grid // Q-Core",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-quantum-grid-theme.json"
       }
     ],
     "commands": [
@@ -122,6 +131,10 @@
       {
         "command": "masumFutureThemes.blackHoleMode",
         "title": "Masum Future Themes: Black Hole Mode"
+      },
+      {
+        "command": "masumFutureThemes.quantumGridMode",
+        "title": "Masum Future Themes: Quantum Grid Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
