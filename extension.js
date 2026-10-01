@@ -194,6 +194,34 @@ async function removeAnimatedLayer(context) {
   );
 }
 
+async function openThemeSelector(context) {
+  const items = Object.entries(MODES).map(([modeKey, mode], index) => ({
+    label: `${index + 1}. ${mode.label}`,
+    description: 'Animated background + color theme',
+    modeKey
+  }));
+
+  items.push({
+    label: 'Disable Animated Layer',
+    description: 'Keep the selected color theme and remove the animated background',
+    modeKey: null
+  });
+
+  const selected = await vscode.window.showQuickPick(items, {
+    title: 'Masum Future Themes // Theme Selector',
+    placeHolder: 'Choose one of the 11 animated themes',
+    matchOnDescription: true
+  });
+
+  if (!selected) return;
+
+  if (selected.modeKey) {
+    await enableMode(context, selected.modeKey);
+  } else {
+    await removeAnimatedLayer(context);
+  }
+}
+
 async function migrateOldImports(context) {
   const config = vscode.workspace.getConfiguration();
   const current = config.get(IMPORTS_KEY, []);
@@ -242,6 +270,7 @@ function activate(context) {
       }
       await reloadWindowNow();
     }),
+    vscode.commands.registerCommand('masumFutureThemes.themeSelector', () => openThemeSelector(context)),
     vscode.commands.registerCommand('masumFutureThemes.cyberCityMode', () => enableMode(context, 'cyberCity')),
     vscode.commands.registerCommand('masumFutureThemes.aiCoreMode', () => enableMode(context, 'aiCore')),
     vscode.commands.registerCommand('masumFutureThemes.blackHoleMode', () => enableMode(context, 'blackHole')),
