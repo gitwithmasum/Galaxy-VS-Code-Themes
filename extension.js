@@ -36,6 +36,11 @@ const MODES = {
     label: 'Masum Mars Colony // Red Frontier',
     theme: 'Masum Mars Colony // Red Frontier',
     files: ['ui/mars-colony.css', 'ui/mars-colony.js']
+  },
+  deepOcean: {
+    label: 'Masum Deep Ocean // Abyss Core',
+    theme: 'Masum Deep Ocean // Abyss Core',
+    files: ['ui/deep-ocean.css', 'ui/deep-ocean.js']
   }
 };
 
@@ -61,7 +66,9 @@ function isMasumAnimatedImport(value) {
     '/ui/quantum-grid.css',
     '/ui/quantum-grid.js',
     '/ui/mars-colony.css',
-    '/ui/mars-colony.js'
+    '/ui/mars-colony.js',
+    '/ui/deep-ocean.css',
+    '/ui/deep-ocean.js'
   ].some((suffix) => normalized.endsWith(suffix));
 
   const looksLikeInstalledExtension = normalized.includes('gitwithmasum.masum-galaxy-future-code-');
@@ -166,7 +173,9 @@ async function migrateOldImports(context) {
 
   const normalized = current.filter((item) => typeof item === 'string').map((item) => item.toLowerCase());
   let modeKey = 'galaxy';
-  if (normalized.some((item) => item.endsWith('/ui/mars-colony.css') || item.endsWith('/ui/mars-colony.js'))) {
+  if (normalized.some((item) => item.endsWith('/ui/deep-ocean.css') || item.endsWith('/ui/deep-ocean.js'))) {
+    modeKey = 'deepOcean';
+  } else if (normalized.some((item) => item.endsWith('/ui/mars-colony.css') || item.endsWith('/ui/mars-colony.js'))) {
     modeKey = 'marsColony';
   } else if (normalized.some((item) => item.endsWith('/ui/quantum-grid.css') || item.endsWith('/ui/quantum-grid.js'))) {
     modeKey = 'quantumGrid';
@@ -202,6 +211,7 @@ function activate(context) {
     vscode.commands.registerCommand('masumFutureThemes.blackHoleMode', () => enableMode(context, 'blackHole')),
     vscode.commands.registerCommand('masumFutureThemes.quantumGridMode', () => enableMode(context, 'quantumGrid')),
     vscode.commands.registerCommand('masumFutureThemes.marsColonyMode', () => enableMode(context, 'marsColony')),
+    vscode.commands.registerCommand('masumFutureThemes.deepOceanMode', () => enableMode(context, 'deepOcean')),
     vscode.commands.registerCommand('masumFutureThemes.galaxyMode', () => enableMode(context, 'galaxy')),
     vscode.commands.registerCommand('masumFutureThemes.disableAnimatedLayer', () => removeAnimatedLayer(context))
   );
