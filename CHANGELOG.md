@@ -2,6 +2,14 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.5.0
+
+- Added the sixth theme: **Masum Mars Colony // Red Frontier**.
+- Added **Masum Future Themes: Mars Colony Mode** for direct switching from the other animated modes.
+- Added an animated Mars scene with colony domes, a communications tower, rover, drone, solar array, drifting dust, distant mountains, twin moons and a subtle scanner field.
+- Added a warm red/orange Mars syntax palette balanced with cyan utility accents and high-contrast code selection/find-match colors.
+- Extended animated import cleanup, migration and reliable reload switching to include Mars Colony assets.
+
 ## 3.4.0
 
 - Added the fifth theme: **Masum Quantum Grid // Q-Core**.
