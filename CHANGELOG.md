@@ -2,6 +2,14 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.1.2
+
+- Rebalanced Cyber City after the high-visibility pass made code too hard to read.
+- Added a darker glass layer behind the editor text while keeping the city visible around and behind it.
+- Reduced Cyber City layer brightness and saturation to a comfortable cinematic level.
+- Strengthened text shadow and editor margin contrast for clearer code readability.
+- Kept neon rain, skyline, hologram and motion effects visible without overpowering syntax.
+
 ## 3.1.1
 
 - Increased Cyber City background visibility substantially.
