@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy and Cyber City animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.1.3",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City and AI Core animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.2.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -20,6 +20,9 @@
     "galaxy",
     "cyber city",
     "neon rain",
+    "ai core",
+    "neural engine",
+    "machine learning",
     "space",
     "futuristic",
     "robotic",
@@ -64,6 +67,7 @@
     "onCommand:masumGalaxy.removeCockpit",
     "onCommand:masumGalaxy.reloadCockpit",
     "onCommand:masumFutureThemes.cyberCityMode",
+    "onCommand:masumFutureThemes.aiCoreMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -78,6 +82,11 @@
         "label": "Masum Cyber City // Neon Rain",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-cyber-city-theme.json"
+      },
+      {
+        "label": "Masum AI Core // Neural Engine",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-ai-core-theme.json"
       }
     ],
     "commands": [
@@ -96,6 +105,10 @@
       {
         "command": "masumFutureThemes.cyberCityMode",
         "title": "Masum Future Themes: Cyber City Mode"
+      },
+      {
+        "command": "masumFutureThemes.aiCoreMode",
+        "title": "Masum Future Themes: AI Core Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
