@@ -2,6 +2,13 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.1.1
+
+- Increased Cyber City background visibility substantially.
+- Brightened the skyline, neon windows, rain, fog, hologram, flying light trails and road glow.
+- Reduced the dark editor overlay so the animated city is easier to see while keeping code readable.
+- Prepared a new package version so installed VSIX users receive the updated Cyber City assets instead of the older 3.1.0 files.
+
 ## 3.1.0
 
 - Added **Masum Future Themes: Cyber City Mode**.
