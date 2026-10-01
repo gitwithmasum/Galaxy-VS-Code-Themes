@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City and AI Core animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.2.1",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core and Black Hole animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.3.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -23,6 +23,9 @@
     "ai core",
     "neural engine",
     "machine learning",
+    "black hole",
+    "event horizon",
+    "accretion disk",
     "space",
     "futuristic",
     "robotic",
@@ -68,6 +71,7 @@
     "onCommand:masumGalaxy.reloadCockpit",
     "onCommand:masumFutureThemes.cyberCityMode",
     "onCommand:masumFutureThemes.aiCoreMode",
+    "onCommand:masumFutureThemes.blackHoleMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -87,6 +91,11 @@
         "label": "Masum AI Core // Neural Engine",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-ai-core-theme.json"
+      },
+      {
+        "label": "Masum Black Hole // Event Horizon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-black-hole-theme.json"
       }
     ],
     "commands": [
@@ -109,6 +118,10 @@
       {
         "command": "masumFutureThemes.aiCoreMode",
         "title": "Masum Future Themes: AI Core Mode"
+      },
+      {
+        "command": "masumFutureThemes.blackHoleMode",
+        "title": "Masum Future Themes: Black Hole Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
