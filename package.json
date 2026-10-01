@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora Polar Light, Mecha Core and Orbital Station animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.9.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora Polar Light, Mecha Core, Orbital Station and Solar Flare animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.10.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -48,6 +48,10 @@
     "space station",
     "earth orbit",
     "satellite",
+    "solar flare",
+    "helios core",
+    "sun",
+    "corona",
     "space",
     "futuristic",
     "robotic",
@@ -100,6 +104,7 @@
     "onCommand:masumFutureThemes.auroraMode",
     "onCommand:masumFutureThemes.mechaCoreMode",
     "onCommand:masumFutureThemes.orbitalStationMode",
+    "onCommand:masumFutureThemes.solarFlareMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -154,6 +159,11 @@
         "label": "Masum Orbital Station // Nexus One",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-orbital-station-theme.json"
+      },
+      {
+        "label": "Masum Solar Flare // Helios Core",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-solar-flare-theme.json"
       }
     ],
     "commands": [
@@ -204,6 +214,10 @@
       {
         "command": "masumFutureThemes.orbitalStationMode",
         "title": "Masum Future Themes: Orbital Station Mode"
+      },
+      {
+        "command": "masumFutureThemes.solarFlareMode",
+        "title": "Masum Future Themes: Solar Flare Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
