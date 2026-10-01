@@ -2,7 +2,7 @@
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
   "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora Polar Light, Mecha Core, Orbital Station and Solar Flare animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.10.0",
+  "version": "3.10.1",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -95,6 +95,7 @@
     "onCommand:masumGalaxy.installCockpit",
     "onCommand:masumGalaxy.removeCockpit",
     "onCommand:masumGalaxy.reloadCockpit",
+    "onCommand:masumFutureThemes.themeSelector",
     "onCommand:masumFutureThemes.cyberCityMode",
     "onCommand:masumFutureThemes.aiCoreMode",
     "onCommand:masumFutureThemes.blackHoleMode",
@@ -178,6 +179,10 @@
       {
         "command": "masumGalaxy.reloadCockpit",
         "title": "Masum Galaxy: Reload Animated Cockpit"
+      },
+      {
+        "command": "masumFutureThemes.themeSelector",
+        "title": "Masum Future Themes: Open Theme Selector"
       },
       {
         "command": "masumFutureThemes.cyberCityMode",
