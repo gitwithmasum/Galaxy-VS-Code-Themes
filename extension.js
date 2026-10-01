@@ -56,6 +56,11 @@ const MODES = {
     label: 'Masum Orbital Station // Nexus One',
     theme: 'Masum Orbital Station // Nexus One',
     files: ['ui/orbital-station.css', 'ui/orbital-station.js']
+  },
+  solarFlare: {
+    label: 'Masum Solar Flare // Helios Core',
+    theme: 'Masum Solar Flare // Helios Core',
+    files: ['ui/solar-flare.css', 'ui/solar-flare.js']
   }
 };
 
@@ -89,7 +94,9 @@ function isMasumAnimatedImport(value) {
     '/ui/mecha-core.css',
     '/ui/mecha-core.js',
     '/ui/orbital-station.css',
-    '/ui/orbital-station.js'
+    '/ui/orbital-station.js',
+    '/ui/solar-flare.css',
+    '/ui/solar-flare.js'
   ].some((suffix) => normalized.endsWith(suffix));
 
   const looksLikeInstalledExtension = normalized.includes('gitwithmasum.masum-galaxy-future-code-');
@@ -194,7 +201,9 @@ async function migrateOldImports(context) {
 
   const normalized = current.filter((item) => typeof item === 'string').map((item) => item.toLowerCase());
   let modeKey = 'galaxy';
-  if (normalized.some((item) => item.endsWith('/ui/orbital-station.css') || item.endsWith('/ui/orbital-station.js'))) {
+  if (normalized.some((item) => item.endsWith('/ui/solar-flare.css') || item.endsWith('/ui/solar-flare.js'))) {
+    modeKey = 'solarFlare';
+  } else if (normalized.some((item) => item.endsWith('/ui/orbital-station.css') || item.endsWith('/ui/orbital-station.js'))) {
     modeKey = 'orbitalStation';
   } else if (normalized.some((item) => item.endsWith('/ui/mecha-core.css') || item.endsWith('/ui/mecha-core.js'))) {
     modeKey = 'mechaCore';
@@ -242,6 +251,7 @@ function activate(context) {
     vscode.commands.registerCommand('masumFutureThemes.auroraMode', () => enableMode(context, 'aurora')),
     vscode.commands.registerCommand('masumFutureThemes.mechaCoreMode', () => enableMode(context, 'mechaCore')),
     vscode.commands.registerCommand('masumFutureThemes.orbitalStationMode', () => enableMode(context, 'orbitalStation')),
+    vscode.commands.registerCommand('masumFutureThemes.solarFlareMode', () => enableMode(context, 'solarFlare')),
     vscode.commands.registerCommand('masumFutureThemes.galaxyMode', () => enableMode(context, 'galaxy')),
     vscode.commands.registerCommand('masumFutureThemes.disableAnimatedLayer', () => removeAnimatedLayer(context))
   );
