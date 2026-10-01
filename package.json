@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole and Quantum Grid animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.4.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid and Mars Colony animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.5.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -29,6 +29,9 @@
     "quantum grid",
     "q-core",
     "quantum",
+    "mars colony",
+    "red frontier",
+    "mars",
     "space",
     "futuristic",
     "robotic",
@@ -76,6 +79,7 @@
     "onCommand:masumFutureThemes.aiCoreMode",
     "onCommand:masumFutureThemes.blackHoleMode",
     "onCommand:masumFutureThemes.quantumGridMode",
+    "onCommand:masumFutureThemes.marsColonyMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -105,6 +109,11 @@
         "label": "Masum Quantum Grid // Q-Core",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-quantum-grid-theme.json"
+      },
+      {
+        "label": "Masum Mars Colony // Red Frontier",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-mars-colony-theme.json"
       }
     ],
     "commands": [
@@ -135,6 +144,10 @@
       {
         "command": "masumFutureThemes.quantumGridMode",
         "title": "Masum Future Themes: Quantum Grid Mode"
+      },
+      {
+        "command": "masumFutureThemes.marsColonyMode",
+        "title": "Masum Future Themes: Mars Colony Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
