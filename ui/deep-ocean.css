@@ -1,0 +1,181 @@
+/* MASUM FUTURE THEMES // Deep Ocean Mode v1
+   Abyss Core cockpit with bioluminescent ocean depth and readable glass editor surfaces. */
+
+.monaco-workbench {
+  background: #020812 !important;
+}
+
+.monaco-workbench .part.editor {
+  z-index: 1 !important;
+}
+
+.monaco-workbench .part.titlebar {
+  z-index: 10000 !important;
+  overflow: visible !important;
+  isolation: auto !important;
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  background-color: rgba(2,8,18,.99) !important;
+}
+
+.monaco-workbench .part.titlebar .menubar,
+.monaco-workbench .part.titlebar .menubar-menu-button,
+.monaco-workbench .part.titlebar .titlebar-center,
+.monaco-workbench .part.titlebar .titlebar-left,
+.monaco-workbench .part.titlebar .titlebar-right {
+  position: relative;
+  z-index: 10001 !important;
+  overflow: visible !important;
+}
+
+.monaco-workbench .part.editor .editor-group-container {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  background: #020a12 !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(82,247,255,.09),
+    inset 0 0 56px rgba(0,126,168,.045);
+}
+
+.monaco-workbench .part.editor .masum-deep-ocean-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .91;
+  background: #020a12;
+}
+
+.monaco-workbench .part.editor .masum-deep-ocean-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 52% 44%, rgba(2,10,18,.02), rgba(2,10,18,.15) 42%, rgba(2,10,18,.48) 100%),
+    linear-gradient(rgba(2,8,16,.08), rgba(2,8,16,.24));
+  backdrop-filter: blur(.55px);
+}
+
+.monaco-workbench .part.editor .masum-deep-ocean-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: saturate(1.14) brightness(.98) contrast(1.06);
+}
+
+.monaco-workbench .part.editor .editor-group-container > :not(.masum-deep-ocean-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.monaco-workbench .part.editor .editor-container,
+.monaco-workbench .part.editor .editor-instance,
+.monaco-workbench .part.editor .monaco-editor,
+.monaco-workbench .part.editor .monaco-editor .overflow-guard,
+.monaco-workbench .part.editor .monaco-editor-background,
+.monaco-workbench .part.editor .monaco-editor .margin,
+.monaco-workbench .part.editor .monaco-editor .monaco-scrollable-element,
+.monaco-workbench .part.editor .monaco-editor .lines-content,
+.monaco-workbench .part.editor .monaco-editor .view-overlays,
+.monaco-workbench .part.editor .monaco-editor .view-lines,
+.monaco-workbench .part.editor .monaco-editor .contentWidgets,
+.monaco-workbench .part.editor .monaco-editor .overlayWidgets {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.monaco-workbench .part.editor .monaco-editor .overflow-guard {
+  background: rgba(2,10,18,.28) !important;
+}
+
+.monaco-workbench .part.editor .monaco-editor .current-line,
+.monaco-workbench .part.editor .monaco-editor .current-line-margin {
+  border-color: rgba(82,247,255,.18) !important;
+  background: linear-gradient(90deg, rgba(82,247,255,.052), rgba(103,255,190,.022), transparent 72%) !important;
+  box-shadow: inset 2px 0 0 rgba(82,247,255,.14);
+}
+
+.monaco-editor .view-lines {
+  text-shadow: 0 0 1px rgba(132,251,255,.16), 0 0 3px rgba(2,8,16,.85);
+}
+
+.monaco-editor .cursor {
+  box-shadow: 0 0 4px rgba(82,247,255,.95), 0 0 14px rgba(82,247,255,.46);
+}
+
+.monaco-workbench .tabs-container .tab.active {
+  box-shadow: inset 0 -1px 0 rgba(82,247,255,.78), inset 0 0 17px rgba(0,126,168,.05);
+}
+
+.monaco-workbench .part.sidebar,
+.monaco-workbench .part.auxiliarybar,
+.monaco-workbench .part.panel {
+  background-color: rgba(3,14,24,.95) !important;
+  backdrop-filter: blur(14px) saturate(1.08);
+  border-color: rgba(82,247,255,.07) !important;
+}
+
+.monaco-workbench .part.activitybar,
+.monaco-workbench .part.statusbar {
+  background-color: rgba(2,9,17,.98) !important;
+  backdrop-filter: blur(10px);
+}
+
+.context-view,
+.monaco-menu-container,
+.monaco-workbench > .context-view,
+.monaco-workbench > .monaco-menu-container,
+.monaco-workbench .context-view {
+  position: fixed !important;
+  z-index: 2147483000 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  isolation: auto !important;
+}
+
+.context-view .monaco-menu,
+.monaco-menu,
+.quick-input-widget,
+.monaco-hover,
+.monaco-editor-hover,
+.notifications-center,
+.notification-toast {
+  z-index: 2147483001 !important;
+  background-color: var(--vscode-menu-background, #071722) !important;
+  color: var(--vscode-menu-foreground, #eafcff) !important;
+  border-color: rgba(82,247,255,.14) !important;
+  box-shadow: 0 10px 36px rgba(0,0,0,.60) !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.monaco-workbench .part.editor::before {
+  content: "ABYSS // CORE PRESSURE STABLE";
+  position: absolute;
+  top: 9px;
+  right: 18px;
+  z-index: 4;
+  pointer-events: none;
+  font: 500 7px/1 monospace;
+  letter-spacing: 2px;
+  color: rgba(82,247,255,.09);
+}
+
+.monaco-workbench .part.editor::after {
+  content: "MASUM BILLAH  //  DEEP OCEAN CORE";
+  position: absolute;
+  right: 22px;
+  bottom: 14px;
+  z-index: 4;
+  pointer-events: none;
+  font: 500 7px/1 monospace;
+  letter-spacing: 2.5px;
+  color: rgba(103,255,190,.055);
+  text-shadow: 0 0 10px rgba(82,247,255,.10);
+}
