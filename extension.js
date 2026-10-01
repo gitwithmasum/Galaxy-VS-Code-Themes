@@ -71,6 +71,11 @@ function modeUris(context, modeKey) {
   });
 }
 
+function modeKeyFromThemeName(themeName) {
+  const match = Object.entries(MODES).find(([, mode]) => mode.theme === themeName);
+  return match ? match[0] : null;
+}
+
 function isMasumAnimatedImport(value) {
   if (typeof value !== 'string') return false;
   const normalized = value.toLowerCase();
@@ -102,6 +107,12 @@ function isMasumAnimatedImport(value) {
   const looksLikeInstalledExtension = normalized.includes('gitwithmasum.masum-galaxy-future-code-');
   const looksLikeSourceRepo = normalized.includes('galaxy-vs-code-themes/ui/');
   return isModeFile && (looksLikeInstalledExtension || looksLikeSourceRepo);
+}
+
+function importsMatchMode(context, imports, modeKey) {
+  if (!Array.isArray(imports)) return false;
+  const desired = modeUris(context, modeKey);
+  return desired.every((uri) => imports.includes(uri));
 }
 
 async function setImports(context, modeKey) {
@@ -194,6 +205,40 @@ async function removeAnimatedLayer(context) {
   );
 }
 
+async function syncAnimatedModeWithColorTheme(context) {
+  const workbenchConfig = vscode.workspace.getConfiguration('workbench');
+  const themeName = workbenchConfig.get('colorTheme');
+  const modeKey = modeKeyFromThemeName(themeName);
+  const config = vscode.workspace.getConfiguration();
+  const currentImports = config.get(IMPORTS_KEY, []);
+  const hasMasumAnimatedImports = Array.isArray(currentImports) && currentImports.some(isMasumAnimatedImport);
+
+  if (!modeKey) {
+    if (!hasMasumAnimatedImports) return;
+    await setImports(context, null);
+
+    if (vscode.extensions.getExtension(LOADER_EXTENSION_ID)) {
+      await finishModeSwitch(
+        'A non-Masum color theme is selected. Apply & reload to remove the previous Masum animated background.'
+      );
+    }
+    return;
+  }
+
+  if (!vscode.extensions.getExtension(LOADER_EXTENSION_ID)) {
+    return;
+  }
+
+  if (importsMatchMode(context, currentImports, modeKey)) {
+    return;
+  }
+
+  await setImports(context, modeKey);
+  await finishModeSwitch(
+    `${MODES[modeKey].label} was selected from Set Color Theme. Apply & reload to switch its animated background too.`
+  );
+}
+
 async function openThemeSelector(context) {
   const items = Object.entries(MODES).map(([modeKey, mode], index) => ({
     label: `${index + 1}. ${mode.label}`,
@@ -282,7 +327,12 @@ function activate(context) {
     vscode.commands.registerCommand('masumFutureThemes.orbitalStationMode', () => enableMode(context, 'orbitalStation')),
     vscode.commands.registerCommand('masumFutureThemes.solarFlareMode', () => enableMode(context, 'solarFlare')),
     vscode.commands.registerCommand('masumFutureThemes.galaxyMode', () => enableMode(context, 'galaxy')),
-    vscode.commands.registerCommand('masumFutureThemes.disableAnimatedLayer', () => removeAnimatedLayer(context))
+    vscode.commands.registerCommand('masumFutureThemes.disableAnimatedLayer', () => removeAnimatedLayer(context)),
+    vscode.workspace.onDidChangeConfiguration((event) => {
+      if (event.affectsConfiguration('workbench.colorTheme')) {
+        syncAnimatedModeWithColorTheme(context).catch(() => {});
+      }
+    })
   );
 
   migrateOldImports(context).catch(() => {});
