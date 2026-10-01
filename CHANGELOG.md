@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.6.0
+
+- Added the seventh theme: **Masum Deep Ocean // Abyss Core**.
+- Added **Masum Future Themes: Deep Ocean Mode** for direct switching from the other animated modes.
+- Added an animated abyss scene with a glowing Abyss Core, rotating rings, underwater light shafts, rising bubbles, drifting jellyfish, deep-sea drone, sea-floor silhouettes and a subtle scanner field.
+- Added a deep-ocean syntax palette built around cyan, aqua, bioluminescent green, violet and high-contrast white.
+- Kept code selection and find-match colors strong so copied/selected code stays obvious over the animated underwater background.
+- Extended animated import cleanup, migration and reliable reload switching to include Deep Ocean assets.
+
 ## 3.5.0
 
 - Added the sixth theme: **Masum Mars Colony // Red Frontier**.
