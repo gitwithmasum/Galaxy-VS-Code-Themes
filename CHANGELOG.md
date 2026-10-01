@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.3.0
+
+- Added the fourth theme: **Masum Black Hole // Event Horizon**.
+- Added **Masum Future Themes: Black Hole Mode** for direct switching from Galaxy, Cyber City or AI Core.
+- Added an animated black-hole scene with a rotating accretion disk, event-horizon glow, gravitational lens arcs, drifting stars, comet light trails and a subtle system scan.
+- Added a black-hole syntax palette built around violet, warm amber, cyan and high-contrast white.
+- Included strong selection and find-match colors so copied/selected code stays obvious over the animated background.
+- Extended animated import cleanup and mode migration to include Black Hole assets.
+
 ## 3.2.1
 
 - Fixed animated theme switching between **Galaxy**, **Cyber City** and **AI Core**.
