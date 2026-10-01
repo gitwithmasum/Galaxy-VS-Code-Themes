@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean and Aurora Polar Light animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.7.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora Polar Light and Mecha Core animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.8.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -39,6 +39,10 @@
     "aurora",
     "polar light",
     "northern lights",
+    "mecha core",
+    "titan reactor",
+    "mech",
+    "robot",
     "space",
     "futuristic",
     "robotic",
@@ -89,6 +93,7 @@
     "onCommand:masumFutureThemes.marsColonyMode",
     "onCommand:masumFutureThemes.deepOceanMode",
     "onCommand:masumFutureThemes.auroraMode",
+    "onCommand:masumFutureThemes.mechaCoreMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -133,6 +138,11 @@
         "label": "Masum Aurora // Polar Light",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-aurora-theme.json"
+      },
+      {
+        "label": "Masum Mecha Core // Titan Reactor",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-mecha-core-theme.json"
       }
     ],
     "commands": [
@@ -175,6 +185,10 @@
       {
         "command": "masumFutureThemes.auroraMode",
         "title": "Masum Future Themes: Aurora Polar Light Mode"
+      },
+      {
+        "command": "masumFutureThemes.mechaCoreMode",
+        "title": "Masum Future Themes: Mecha Core Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
