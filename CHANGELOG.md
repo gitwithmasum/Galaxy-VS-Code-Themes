@@ -2,6 +2,14 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.4.0
+
+- Added the fifth theme: **Masum Quantum Grid // Q-Core**.
+- Added **Masum Future Themes: Quantum Grid Mode** for direct switching from the other animated modes.
+- Added an animated Q-Core scene with a quantum lattice, rotating core rings, glowing nodes, moving phase pulses, scanner field and subtle quantum-status text.
+- Added a cyan, electric-blue and violet syntax palette with strong selection/find-match contrast for readable coding over the animated background.
+- Extended animated import cleanup, migration and reliable reload switching to include Quantum Grid assets.
+
 ## 3.3.0
 
 - Added the fourth theme: **Masum Black Hole // Event Horizon**.
