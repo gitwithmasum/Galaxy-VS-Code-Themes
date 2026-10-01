@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.9.0
+
+- Added the tenth theme: **Masum Orbital Station // Nexus One**.
+- Added **Masum Future Themes: Orbital Station Mode** for direct switching from the other animated modes.
+- Added a cinematic Earth-orbit control-deck scene with a glowing Earth, rotating Nexus One station rings, satellite drift, spacecraft traffic, docking lanes, beacons, stars and a scanning HUD.
+- Added an orbital syntax palette built around cyan, electric blue, violet and soft amber with strong code-selection/find-match contrast.
+- Kept a dark glass editor layer so the station and Earth remain visible without reducing code readability.
+- Extended animated import cleanup, migration and reliable reload switching to include Orbital Station assets.
+
 ## 3.8.0
 
 - Added the ninth theme: **Masum Mecha Core // Titan Reactor**.
