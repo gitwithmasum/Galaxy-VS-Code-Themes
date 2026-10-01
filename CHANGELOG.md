@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.10.0
+
+- Added the eleventh theme: **Masum Solar Flare // Helios Core**.
+- Added **Masum Future Themes: Solar Flare Mode** for direct switching from the other animated modes.
+- Added an animated Helios Core with a glowing sun, rotating corona rings, solar-flare arcs, plasma particles, star field and scanning solar HUD.
+- Added a warm solar syntax palette built around amber, orange, cyan and high-contrast cream/white with strong selection and find-match visibility.
+- Kept a dark glass editor layer so the solar scene remains vivid without reducing code readability.
+- Extended animated import cleanup, migration and reliable reload switching to include Solar Flare assets.
+
 ## 3.9.0
 
 - Added the tenth theme: **Masum Orbital Station // Nexus One**.
