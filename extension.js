@@ -21,6 +21,11 @@ const MODES = {
     label: 'Masum AI Core // Neural Engine',
     theme: 'Masum AI Core // Neural Engine',
     files: ['ui/ai-core.css', 'ui/ai-core.js']
+  },
+  blackHole: {
+    label: 'Masum Black Hole // Event Horizon',
+    theme: 'Masum Black Hole // Event Horizon',
+    files: ['ui/black-hole.css', 'ui/black-hole.js']
   }
 };
 
@@ -40,7 +45,9 @@ function isMasumAnimatedImport(value) {
     '/ui/cyber-city.css',
     '/ui/cyber-city.js',
     '/ui/ai-core.css',
-    '/ui/ai-core.js'
+    '/ui/ai-core.js',
+    '/ui/black-hole.css',
+    '/ui/black-hole.js'
   ].some((suffix) => normalized.endsWith(suffix));
 
   const looksLikeInstalledExtension = normalized.includes('gitwithmasum.masum-galaxy-future-code-');
@@ -109,8 +116,6 @@ async function finishModeSwitch(message) {
     return;
   }
 
-  // Each animated mode injects its own long-lived JS observer. A full workbench
-  // reload is required so the previous mode cannot keep re-inserting its layer.
   await reloadWindowNow();
 }
 
@@ -121,8 +126,6 @@ async function enableMode(context, modeKey) {
   const ready = await ensureLoaderInstalled();
   if (!ready) return;
 
-  // Replace the previous animated imports first, then switch the normal VS Code
-  // color theme immediately. The window reload below applies the new cockpit JS.
   await setImports(context, modeKey);
   await vscode.workspace.getConfiguration('workbench').update(
     'colorTheme',
@@ -149,7 +152,9 @@ async function migrateOldImports(context) {
 
   const normalized = current.filter((item) => typeof item === 'string').map((item) => item.toLowerCase());
   let modeKey = 'galaxy';
-  if (normalized.some((item) => item.endsWith('/ui/ai-core.css') || item.endsWith('/ui/ai-core.js'))) {
+  if (normalized.some((item) => item.endsWith('/ui/black-hole.css') || item.endsWith('/ui/black-hole.js'))) {
+    modeKey = 'blackHole';
+  } else if (normalized.some((item) => item.endsWith('/ui/ai-core.css') || item.endsWith('/ui/ai-core.js'))) {
     modeKey = 'aiCore';
   } else if (normalized.some((item) => item.endsWith('/ui/cyber-city.css') || item.endsWith('/ui/cyber-city.js'))) {
     modeKey = 'cyberCity';
@@ -176,6 +181,7 @@ function activate(context) {
     }),
     vscode.commands.registerCommand('masumFutureThemes.cyberCityMode', () => enableMode(context, 'cyberCity')),
     vscode.commands.registerCommand('masumFutureThemes.aiCoreMode', () => enableMode(context, 'aiCore')),
+    vscode.commands.registerCommand('masumFutureThemes.blackHoleMode', () => enableMode(context, 'blackHole')),
     vscode.commands.registerCommand('masumFutureThemes.galaxyMode', () => enableMode(context, 'galaxy')),
     vscode.commands.registerCommand('masumFutureThemes.disableAnimatedLayer', () => removeAnimatedLayer(context))
   );
