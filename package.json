@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora Polar Light and Mecha Core animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.8.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean, Aurora Polar Light, Mecha Core and Orbital Station animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.9.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -43,6 +43,11 @@
     "titan reactor",
     "mech",
     "robot",
+    "orbital station",
+    "nexus one",
+    "space station",
+    "earth orbit",
+    "satellite",
     "space",
     "futuristic",
     "robotic",
@@ -94,6 +99,7 @@
     "onCommand:masumFutureThemes.deepOceanMode",
     "onCommand:masumFutureThemes.auroraMode",
     "onCommand:masumFutureThemes.mechaCoreMode",
+    "onCommand:masumFutureThemes.orbitalStationMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -143,6 +149,11 @@
         "label": "Masum Mecha Core // Titan Reactor",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-mecha-core-theme.json"
+      },
+      {
+        "label": "Masum Orbital Station // Nexus One",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-orbital-station-theme.json"
       }
     ],
     "commands": [
@@ -189,6 +200,10 @@
       {
         "command": "masumFutureThemes.mechaCoreMode",
         "title": "Masum Future Themes: Mecha Core Mode"
+      },
+      {
+        "command": "masumFutureThemes.orbitalStationMode",
+        "title": "Masum Future Themes: Orbital Station Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
