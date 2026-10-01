@@ -2,6 +2,14 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.10.2
+
+- Reworked the Marketplace README to showcase all 11 included themes in one clear collection overview.
+- Added the **Open Theme Selector** workflow as the primary animated-mode switching method.
+- Added clearer standard-theme vs animated-mode installation instructions.
+- Added an updated local VSIX packaging/install example for version 3.10.2.
+- Added clearer Custom CSS and JS Loader notes, disable-animation instructions and recommended daily workflow.
+
 ## 3.10.1
 
 - Added **Masum Future Themes: Open Theme Selector**.
