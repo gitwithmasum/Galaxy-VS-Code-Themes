@@ -1,0 +1,185 @@
+/* MASUM FUTURE THEMES // Orbital Station Mode v1
+   Nexus One orbital control deck with Earth view and readable glass editor surfaces. */
+
+.monaco-workbench {
+  background: #020711 !important;
+}
+
+.monaco-workbench .part.editor {
+  z-index: 1 !important;
+}
+
+.monaco-workbench .part.titlebar {
+  z-index: 10000 !important;
+  overflow: visible !important;
+  isolation: auto !important;
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  background-color: rgba(2,7,17,.99) !important;
+}
+
+.monaco-workbench .part.titlebar .menubar,
+.monaco-workbench .part.titlebar .menubar-menu-button,
+.monaco-workbench .part.titlebar .titlebar-center,
+.monaco-workbench .part.titlebar .titlebar-left,
+.monaco-workbench .part.titlebar .titlebar-right {
+  position: relative;
+  z-index: 10001 !important;
+  overflow: visible !important;
+}
+
+.monaco-workbench .part.editor .editor-group-container {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  background: #020913 !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(78,244,255,.09),
+    inset 0 0 58px rgba(89,107,255,.04);
+}
+
+.monaco-workbench .part.editor .masum-orbital-station-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .93;
+  background: #020913;
+}
+
+.monaco-workbench .part.editor .masum-orbital-station-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 64% 42%, rgba(2,9,19,.02), rgba(2,9,19,.15) 42%, rgba(2,9,19,.48) 100%),
+    linear-gradient(rgba(2,7,15,.08), rgba(2,7,15,.24));
+  backdrop-filter: blur(.5px);
+}
+
+.monaco-workbench .part.editor .masum-orbital-station-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: saturate(1.12) brightness(.98) contrast(1.06);
+}
+
+.monaco-workbench .part.editor .editor-group-container > :not(.masum-orbital-station-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.monaco-workbench .part.editor .editor-container,
+.monaco-workbench .part.editor .editor-instance,
+.monaco-workbench .part.editor .monaco-editor,
+.monaco-workbench .part.editor .monaco-editor .overflow-guard,
+.monaco-workbench .part.editor .monaco-editor-background,
+.monaco-workbench .part.editor .monaco-editor .margin,
+.monaco-workbench .part.editor .monaco-editor .monaco-scrollable-element,
+.monaco-workbench .part.editor .monaco-editor .lines-content,
+.monaco-workbench .part.editor .monaco-editor .view-overlays,
+.monaco-workbench .part.editor .monaco-editor .view-lines,
+.monaco-workbench .part.editor .monaco-editor .contentWidgets,
+.monaco-workbench .part.editor .monaco-editor .overlayWidgets {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.monaco-workbench .part.editor .monaco-editor .overflow-guard {
+  background: rgba(2,9,19,.31) !important;
+}
+
+.monaco-workbench .part.editor .monaco-editor .margin {
+  background: rgba(2,9,19,.40) !important;
+}
+
+.monaco-workbench .part.editor .monaco-editor .current-line,
+.monaco-workbench .part.editor .monaco-editor .current-line-margin {
+  border-color: rgba(78,244,255,.18) !important;
+  background: linear-gradient(90deg, rgba(78,244,255,.055), rgba(89,107,255,.025), transparent 72%) !important;
+  box-shadow: inset 2px 0 0 rgba(78,244,255,.14);
+}
+
+.monaco-editor .view-lines {
+  text-shadow: 0 0 1px rgba(168,251,255,.16), 0 0 3px rgba(2,7,15,.86);
+}
+
+.monaco-editor .cursor {
+  box-shadow: 0 0 4px rgba(78,244,255,.95), 0 0 14px rgba(78,244,255,.46);
+}
+
+.monaco-workbench .tabs-container .tab.active {
+  box-shadow: inset 0 -1px 0 rgba(78,244,255,.78), inset 0 0 17px rgba(89,107,255,.05);
+}
+
+.monaco-workbench .part.sidebar,
+.monaco-workbench .part.auxiliarybar,
+.monaco-workbench .part.panel {
+  background-color: rgba(3,12,22,.95) !important;
+  backdrop-filter: blur(14px) saturate(1.08);
+  border-color: rgba(78,244,255,.07) !important;
+}
+
+.monaco-workbench .part.activitybar,
+.monaco-workbench .part.statusbar {
+  background-color: rgba(2,8,16,.98) !important;
+  backdrop-filter: blur(10px);
+}
+
+.context-view,
+.monaco-menu-container,
+.monaco-workbench > .context-view,
+.monaco-workbench > .monaco-menu-container,
+.monaco-workbench .context-view {
+  position: fixed !important;
+  z-index: 2147483000 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  isolation: auto !important;
+}
+
+.context-view .monaco-menu,
+.monaco-menu,
+.quick-input-widget,
+.monaco-hover,
+.monaco-editor-hover,
+.notifications-center,
+.notification-toast {
+  z-index: 2147483001 !important;
+  background-color: var(--vscode-menu-background, #07131f) !important;
+  color: var(--vscode-menu-foreground, #eafcff) !important;
+  border-color: rgba(78,244,255,.14) !important;
+  box-shadow: 0 10px 36px rgba(0,0,0,.60) !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.monaco-workbench .part.editor::before {
+  content: "ORBITAL // NEXUS ONE ONLINE";
+  position: absolute;
+  top: 9px;
+  right: 18px;
+  z-index: 4;
+  pointer-events: none;
+  font: 500 7px/1 monospace;
+  letter-spacing: 2px;
+  color: rgba(78,244,255,.09);
+}
+
+.monaco-workbench .part.editor::after {
+  content: "MASUM BILLAH  //  ORBITAL COMMAND";
+  position: absolute;
+  right: 22px;
+  bottom: 14px;
+  z-index: 4;
+  pointer-events: none;
+  font: 500 7px/1 monospace;
+  letter-spacing: 2.5px;
+  color: rgba(126,140,255,.06);
+  text-shadow: 0 0 10px rgba(78,244,255,.10);
+}
