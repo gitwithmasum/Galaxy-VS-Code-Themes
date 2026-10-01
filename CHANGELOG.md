@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.1.0
+
+- Added **Masum Future Themes: Cyber City Mode**.
+- Added the new **Masum Cyber City // Neon Rain** color theme.
+- Added an animated neon-rain megacity layer with hologram signage, flying light trails, fog, HUD scan and futuristic skyline effects.
+- Added **Masum Future Themes: Galaxy Mode** for switching back to the original Galaxy cockpit.
+- Added **Masum Future Themes: Disable Animated Layer** for returning to a standard VS Code workbench while keeping the selected color theme.
+- Updated mode switching so Galaxy and Cyber City imports replace each other cleanly instead of stacking.
+
 ## 3.0.3
 
 - Replaced the extension icon with the selected futuristic square **MG** astronaut-galaxy logo.
