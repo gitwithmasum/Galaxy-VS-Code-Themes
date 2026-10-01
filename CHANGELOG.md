@@ -2,6 +2,13 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.10.1
+
+- Added **Masum Future Themes: Open Theme Selector**.
+- Added a single searchable Quick Pick menu containing all 11 animated modes.
+- Selecting a theme from the menu now runs the same reliable animated-mode switching flow, including the Custom CSS/JS apply step and VS Code window reload.
+- Added **Disable Animated Layer** to the selector so the animation can be removed while keeping the selected color theme.
+
 ## 3.10.0
 
 - Added the eleventh theme: **Masum Solar Flare // Helios Core**.
