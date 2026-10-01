@@ -2,6 +2,14 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.10.3
+
+- Fixed switching Masum themes through VS Code's built-in **Preferences: Color Theme / Set Color Theme** flow.
+- When a Masum color theme is selected and Custom CSS and JS Loader is installed, the matching animated CSS/JS imports are now selected automatically.
+- Added an **Apply & Reload Window** prompt so the previous animated JavaScript layer is fully replaced instead of remaining on screen.
+- Selecting a non-Masum color theme now removes stale Masum animated imports and offers to reload the workbench cleanly.
+- Kept standard color-theme switching functional even when the optional Custom CSS and JS Loader is not installed.
+
 ## 3.10.2
 
 - Reworked the Marketplace README to showcase all 11 included themes in one clear collection overview.
