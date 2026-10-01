@@ -2,6 +2,13 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.2.1
+
+- Fixed animated theme switching between **Galaxy**, **Cyber City** and **AI Core**.
+- Added an explicit VS Code window reload after Custom CSS/JS is reapplied so the previous mode's long-running JavaScript observer cannot keep re-inserting its old background layer.
+- Kept normal color-theme switching immediate while making the animated cockpit switch reliable.
+- Updated animated-layer removal and cockpit reload commands to use the same reliable reload flow.
+
 ## 3.2.0
 
 - Added the third theme: **Masum AI Core // Neural Engine**.
