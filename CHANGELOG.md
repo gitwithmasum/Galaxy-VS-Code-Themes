@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.2.0
+
+- Added the third theme: **Masum AI Core // Neural Engine**.
+- Added **Masum Future Themes: AI Core Mode** to switch directly from Galaxy or Cyber City into the neural-engine cockpit.
+- Added an animated AI core with rotating neural rings, glowing nodes, data pulses, grid lines, system scan and subtle data-stream text.
+- Added an AI-focused syntax palette using cyan, violet, white, green and warm numeric accents.
+- Included strong code-selection colors from the start so copied/selected code remains obvious on the animated background.
+- Updated mode switching so Galaxy, Cyber City and AI Core replace each other cleanly without stacking animated layers.
+
 ## 3.1.3
 
 - Improved selected-code visibility in both **Cyber City** and **Galaxy** themes.
