@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme with an optional animated galaxy cockpit featuring 8 planets, Sun, Moon, nebulae, HUD effects and neon syntax.",
-  "version": "3.0.3",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy and Cyber City animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.1.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -18,6 +18,8 @@
   ],
   "keywords": [
     "galaxy",
+    "cyber city",
+    "neon rain",
     "space",
     "futuristic",
     "robotic",
@@ -60,7 +62,10 @@
     "onStartupFinished",
     "onCommand:masumGalaxy.installCockpit",
     "onCommand:masumGalaxy.removeCockpit",
-    "onCommand:masumGalaxy.reloadCockpit"
+    "onCommand:masumGalaxy.reloadCockpit",
+    "onCommand:masumFutureThemes.cyberCityMode",
+    "onCommand:masumFutureThemes.galaxyMode",
+    "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
   "contributes": {
     "themes": [
@@ -68,6 +73,11 @@
         "label": "Masum Galaxy // Future Code",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-galaxy-color-theme.json"
+      },
+      {
+        "label": "Masum Cyber City // Neon Rain",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-cyber-city-theme.json"
       }
     ],
     "commands": [
@@ -82,6 +92,18 @@
       {
         "command": "masumGalaxy.reloadCockpit",
         "title": "Masum Galaxy: Reload Animated Cockpit"
+      },
+      {
+        "command": "masumFutureThemes.cyberCityMode",
+        "title": "Masum Future Themes: Cyber City Mode"
+      },
+      {
+        "command": "masumFutureThemes.galaxyMode",
+        "title": "Masum Future Themes: Galaxy Mode"
+      },
+      {
+        "command": "masumFutureThemes.disableAnimatedLayer",
+        "title": "Masum Future Themes: Disable Animated Layer"
       }
     ]
   },
