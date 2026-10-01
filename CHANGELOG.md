@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.8.0
+
+- Added the ninth theme: **Masum Mecha Core // Titan Reactor**.
+- Added **Masum Future Themes: Mecha Core Mode** for direct switching from the other animated modes.
+- Added an animated Titan Reactor cockpit with a glowing hexagonal power core, rotating mechanical rings, servo pistons, energy arcs, warning lights, sparks, industrial armor panels and a scanning HUD.
+- Added a steel, cyan, amber and orange syntax palette with strong selection/find-match contrast for readable coding over the mechanical scene.
+- Kept the editor on a dark glass layer so the reactor remains visible without overpowering code.
+- Extended animated import cleanup, migration and reliable reload switching to include Mecha Core assets.
+
 ## 3.7.0
 
 - Added the eighth theme: **Masum Aurora // Polar Light**.
