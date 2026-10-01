@@ -2,6 +2,15 @@
 
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
+## 3.7.0
+
+- Added the eighth theme: **Masum Aurora // Polar Light**.
+- Added **Masum Future Themes: Aurora Polar Light Mode** for direct switching from the other animated modes.
+- Added a cinematic polar-night sky with animated green/cyan/violet aurora ribbons, vertical polar-light beams, stars, moon glow, drifting snow, a shooting star, icy horizon and mountain silhouettes.
+- Added an Aurora syntax palette built around mint green, cyan, violet and soft warm accents while preserving strong code-selection and find-match contrast.
+- Kept a dark glass editor layer so the aurora remains clearly visible in the sky without making code hard to read.
+- Extended animated import cleanup, migration and reliable reload switching to include Aurora assets.
+
 ## 3.6.0
 
 - Added the seventh theme: **Masum Deep Ocean // Abyss Core**.
