@@ -4,28 +4,34 @@
   <img src="images/marketplace-hero.jpg" alt="Masum Galaxy // Future Code — futuristic galaxy cockpit banner" width="100%">
 </p>
 
-**Futuristic robotic coding. Galaxy atmosphere. Code stays in focus.**
+**Futuristic robotic coding. Galaxy atmosphere. Cyber City neon rain. Code stays in focus.**
 
-**Marketplace** · **Free** · **MIT** · **Optional Animated Cockpit**
+**Marketplace** · **Free** · **MIT** · **Optional Animated Modes**
 
-A futuristic robotic dark theme for Visual Studio Code by **Masum Billah**. The core extension is a normal VS Code color theme. The optional **Galaxy Cockpit** adds an animated solar-system background, HUD effects, glass panels, neon glow and a 40-second planet cycle.
+A futuristic VS Code theme collection by **Masum Billah**. Version 3.1 introduces a second complete mode: **Masum Cyber City // Neon Rain**, alongside the original Galaxy cockpit.
 
 > **Marketplace:** [Install Masum Galaxy // Future Code](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
 
-## Galaxy Cockpit
+## Available modes
 
-The visual system follows one rule: **the galaxy should look cinematic without fighting the code**. Background effects are dimmed, softened and kept behind a high-contrast robotic syntax palette.
+### Masum Galaxy // Future Code
 
-### Highlights
+- Robotic cyan/violet syntax
+- 8 animated planets with 5-second scenes
+- Sun, Moon, nebula drift, stars and orbit lines
+- Glass cockpit UI and HUD scan effects
+- Subtle `MASUM BILLAH // GALAXY CORE` signature
 
-- **Robotic neon syntax** — cyan, violet, blue and controlled accent colors tuned for dark environments.
-- **8-planet animated loop** — Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.
-- **5-second planet scenes** — the complete cycle lasts about 40 seconds.
-- **Solar ambience** — Sun, Moon, stars, nebula drift, orbit lines and HUD scan effects.
-- **Glass cockpit UI** — futuristic sidebar, panel, active-line and cursor treatments.
-- **Readable by design** — dark overlays keep code visually dominant during long sessions.
-- **Optional animation** — remove the cockpit at any time without uninstalling the color theme.
-- **Subtle signature** — `MASUM BILLAH // GALAXY CORE` stays nearly invisible while coding.
+### Masum Cyber City // Neon Rain
+
+- Futuristic neon megacity skyline
+- Animated cyan/purple rain
+- Hologram signage and light traffic
+- Slow fog drift and HUD scanner
+- Cyberpunk pink/cyan syntax palette
+- Subtle `MASUM BILLAH // NIGHT CITY CORE` signature
+
+Both animated modes are deliberately dimmed so the code remains visually dominant.
 
 ## Quick install
 
@@ -33,46 +39,59 @@ The visual system follows one rule: **the galaxy should look cinematic without f
 2. Search for **Masum Galaxy // Future Code**.
 3. Click **Install**.
 4. Open the Command Palette with `Ctrl+Shift+P`.
-5. Run **Preferences: Color Theme**.
-6. Select **Masum Galaxy // Future Code**.
+5. Select either **Masum Galaxy // Future Code** or **Masum Cyber City // Neon Rain** from **Preferences: Color Theme**.
 
-The normal theme works immediately through the standard VS Code theme API.
+The normal color themes work immediately through the standard VS Code theme API.
 
-## Enable the animated Galaxy Cockpit
+## Animated mode commands
 
-The animated background is optional because VS Code's official theme API does not support arbitrary animated workbench backgrounds.
-
-1. Open the Command Palette.
-2. Run **Masum Galaxy: Install Animated Cockpit**.
-3. If **Custom CSS and JS Loader** is not installed, Masum Galaxy will offer to install it.
-4. Choose **Reload Custom CSS/JS** when prompted.
-5. Restart VS Code if requested.
-
-### Cockpit commands
+The animated workbench layer is optional because VS Code's official theme API does not support arbitrary animated workbench backgrounds.
 
 ```text
+Masum Future Themes: Cyber City Mode
+Masum Future Themes: Galaxy Mode
+Masum Future Themes: Disable Animated Layer
+
 Masum Galaxy: Install Animated Cockpit
 Masum Galaxy: Reload Animated Cockpit
 Masum Galaxy: Remove Animated Cockpit
 ```
 
-## Important note about the animated layer
+### Enable Cyber City
 
-The optional cockpit uses `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API. VS Code may therefore show a modified/corrupt-installation warning, and after a VS Code update the cockpit may need to be reloaded.
+1. Open `Ctrl+Shift+P`.
+2. Run **Masum Future Themes: Cyber City Mode**.
+3. Install **Custom CSS and JS Loader** if prompted.
+4. Choose **Reload Custom CSS/JS**.
+5. Restart VS Code if requested.
 
-The **normal Masum Galaxy color theme is unaffected** and can be used without the custom cockpit layer.
+The command automatically switches the color theme to **Masum Cyber City // Neon Rain** and replaces the Galaxy animated imports, so the two modes do not stack.
 
-On Windows, the Custom CSS and JS Loader may require VS Code to run with Administrator permission while applying or removing the workbench modification.
+### Switch back to Galaxy
+
+Run:
+
+```text
+Masum Future Themes: Galaxy Mode
+```
+
+Then reload Custom CSS/JS when prompted.
+
+## Important note about animated layers
+
+Animated modes use `be5invis.vscode-custom-css`, which modifies VS Code workbench files outside the official extension styling API. VS Code may therefore show a modified/corrupt-installation warning, and after a VS Code update the animated layer may need to be reloaded.
+
+The standard color themes are unaffected and can be used without the custom animated layer.
+
+On Windows, Custom CSS and JS Loader may require VS Code to run with Administrator permission while applying or removing workbench modifications.
 
 ## Focus and performance
 
-The cockpit is intentionally dimmed so code stays dominant. If you prefer maximum focus, lower GPU usage or a completely standard VS Code workbench, run:
+If you want the normal VS Code workbench while keeping the selected Masum color theme, run:
 
 ```text
-Masum Galaxy: Remove Animated Cockpit
+Masum Future Themes: Disable Animated Layer
 ```
-
-The color theme remains installed and active.
 
 ## Local development
 
