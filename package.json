@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony and Deep Ocean animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.6.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony, Deep Ocean and Aurora Polar Light animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.7.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -36,6 +36,9 @@
     "abyss core",
     "underwater",
     "bioluminescent",
+    "aurora",
+    "polar light",
+    "northern lights",
     "space",
     "futuristic",
     "robotic",
@@ -85,6 +88,7 @@
     "onCommand:masumFutureThemes.quantumGridMode",
     "onCommand:masumFutureThemes.marsColonyMode",
     "onCommand:masumFutureThemes.deepOceanMode",
+    "onCommand:masumFutureThemes.auroraMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -124,6 +128,11 @@
         "label": "Masum Deep Ocean // Abyss Core",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-deep-ocean-theme.json"
+      },
+      {
+        "label": "Masum Aurora // Polar Light",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-aurora-theme.json"
       }
     ],
     "commands": [
@@ -162,6 +171,10 @@
       {
         "command": "masumFutureThemes.deepOceanMode",
         "title": "Masum Future Themes: Deep Ocean Mode"
+      },
+      {
+        "command": "masumFutureThemes.auroraMode",
+        "title": "Masum Future Themes: Aurora Polar Light Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
