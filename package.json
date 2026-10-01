@@ -1,8 +1,8 @@
 {
   "name": "masum-galaxy-future-code",
   "displayName": "Masum Galaxy // Future Code",
-  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid and Mars Colony animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
-  "version": "3.5.0",
+  "description": "A futuristic robotic VS Code theme collection with Galaxy, Cyber City, AI Core, Black Hole, Quantum Grid, Mars Colony and Deep Ocean animated modes, neon syntax, HUD effects and optional cinematic workbench layers.",
+  "version": "3.6.0",
   "publisher": "gitwithmasum",
   "author": {
     "name": "Masum Billah",
@@ -32,6 +32,10 @@
     "mars colony",
     "red frontier",
     "mars",
+    "deep ocean",
+    "abyss core",
+    "underwater",
+    "bioluminescent",
     "space",
     "futuristic",
     "robotic",
@@ -80,6 +84,7 @@
     "onCommand:masumFutureThemes.blackHoleMode",
     "onCommand:masumFutureThemes.quantumGridMode",
     "onCommand:masumFutureThemes.marsColonyMode",
+    "onCommand:masumFutureThemes.deepOceanMode",
     "onCommand:masumFutureThemes.galaxyMode",
     "onCommand:masumFutureThemes.disableAnimatedLayer"
   ],
@@ -114,6 +119,11 @@
         "label": "Masum Mars Colony // Red Frontier",
         "uiTheme": "vs-dark",
         "path": "./themes/masum-mars-colony-theme.json"
+      },
+      {
+        "label": "Masum Deep Ocean // Abyss Core",
+        "uiTheme": "vs-dark",
+        "path": "./themes/masum-deep-ocean-theme.json"
       }
     ],
     "commands": [
@@ -148,6 +158,10 @@
       {
         "command": "masumFutureThemes.marsColonyMode",
         "title": "Masum Future Themes: Mars Colony Mode"
+      },
+      {
+        "command": "masumFutureThemes.deepOceanMode",
+        "title": "Masum Future Themes: Deep Ocean Mode"
       },
       {
         "command": "masumFutureThemes.galaxyMode",
