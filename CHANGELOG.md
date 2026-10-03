@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.10.7
+
+- Removed the Product Icon Aurora hover CSS from **Masum Galaxy // Future Code**.
+- The Aurora hover feature now lives in **Masum Galaxy // Product Icons v2.1.0**, where it belongs.
+- Keeps Future Code responsible for color/animated workbench themes and Product Icons responsible for Product Icon behavior.
+
+# Changelog
+
 ## 3.10.6
 
 - Corrected the previous hover update to target **VS Code Product Icons** specifically.
