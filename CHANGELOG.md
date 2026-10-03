@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.10.4
+
+- Added an **Aurora glow hover effect** for Galaxy UI icons.
+- Hovering Activity Bar icons now adds a cyan → blue → violet light bloom without changing the normal icon color.
+- Added subtle hover lift/scale for clearer feedback.
+- Extended the glow to title bar, sidebar/panel action icons, tabs and status-bar actions.
+- Added reduced-motion handling so the effect remains comfortable when motion reduction is enabled.
+
 All notable changes to **Masum Galaxy // Future Code** are documented here.
 
 ## 3.10.3
