@@ -213,3 +213,92 @@
   color: rgba(112,244,255,.04);
   text-shadow: 0 0 10px rgba(62,231,255,.07);
 }
+
+
+/* MASUM GALAXY // Aurora icon hover
+   Keeps the normal icon color unchanged, then adds cyan-violet aurora light only on hover. */
+.monaco-workbench .part.activitybar .action-item .codicon,
+.monaco-workbench .part.titlebar .action-item .codicon,
+.monaco-workbench .part.sidebar .monaco-action-bar .action-item .codicon,
+.monaco-workbench .part.auxiliarybar .monaco-action-bar .action-item .codicon,
+.monaco-workbench .part.panel .monaco-action-bar .action-item .codicon,
+.monaco-workbench .part.statusbar .statusbar-item .codicon,
+.monaco-workbench .tabs-container .action-item .codicon {
+  transform-origin: center;
+  transition:
+    filter .18s ease,
+    text-shadow .18s ease,
+    transform .18s cubic-bezier(.2,.8,.2,1),
+    opacity .18s ease;
+}
+
+.monaco-workbench .part.activitybar .action-item:hover .codicon,
+.monaco-workbench .part.titlebar .action-item:hover .codicon,
+.monaco-workbench .part.sidebar .monaco-action-bar .action-item:hover .codicon,
+.monaco-workbench .part.auxiliarybar .monaco-action-bar .action-item:hover .codicon,
+.monaco-workbench .part.panel .monaco-action-bar .action-item:hover .codicon,
+.monaco-workbench .part.statusbar .statusbar-item:hover .codicon,
+.monaco-workbench .tabs-container .action-item:hover .codicon {
+  opacity: 1 !important;
+  transform: translateY(-1px) scale(1.10);
+  filter:
+    drop-shadow(0 0 2px rgba(234,251,255,.95))
+    drop-shadow(0 0 5px rgba(77,235,255,.90))
+    drop-shadow(0 0 9px rgba(77,124,255,.72))
+    drop-shadow(0 0 13px rgba(163,108,255,.48));
+  text-shadow:
+    0 0 3px rgba(234,251,255,.90),
+    0 0 8px rgba(77,235,255,.82),
+    0 0 14px rgba(139,92,255,.52);
+  animation: masum-aurora-icon-hover 1.15s ease-in-out infinite alternate;
+}
+
+/* A soft aura behind Activity Bar icons without changing their normal color. */
+.monaco-workbench .part.activitybar .action-item {
+  border-radius: 11px;
+  transition:
+    background .18s ease,
+    box-shadow .18s ease,
+    transform .18s ease;
+}
+
+.monaco-workbench .part.activitybar .action-item:hover {
+  background:
+    radial-gradient(circle at 48% 50%,
+      rgba(77,235,255,.13) 0%,
+      rgba(77,124,255,.085) 34%,
+      rgba(139,92,255,.065) 52%,
+      transparent 72%) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(77,235,255,.07),
+    0 0 16px rgba(77,124,255,.055);
+}
+
+@keyframes masum-aurora-icon-hover {
+  0% {
+    filter:
+      drop-shadow(0 0 2px rgba(234,251,255,.90))
+      drop-shadow(0 0 5px rgba(77,235,255,.82))
+      drop-shadow(0 0 9px rgba(77,124,255,.60))
+      drop-shadow(0 0 12px rgba(139,92,255,.38));
+  }
+  100% {
+    filter:
+      drop-shadow(0 0 3px rgba(234,251,255,1))
+      drop-shadow(0 0 7px rgba(77,235,255,.98))
+      drop-shadow(0 0 12px rgba(77,124,255,.82))
+      drop-shadow(0 0 17px rgba(163,108,255,.58));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monaco-workbench .part.activitybar .action-item:hover .codicon,
+  .monaco-workbench .part.titlebar .action-item:hover .codicon,
+  .monaco-workbench .part.sidebar .monaco-action-bar .action-item:hover .codicon,
+  .monaco-workbench .part.auxiliarybar .monaco-action-bar .action-item:hover .codicon,
+  .monaco-workbench .part.panel .monaco-action-bar .action-item:hover .codicon,
+  .monaco-workbench .part.statusbar .statusbar-item:hover .codicon,
+  .monaco-workbench .tabs-container .action-item:hover .codicon {
+    animation: none;
+  }
+}
