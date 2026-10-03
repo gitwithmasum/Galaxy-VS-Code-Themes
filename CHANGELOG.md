@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.10.6
+
+- Corrected the previous hover update to target **VS Code Product Icons** specifically.
+- Removed the accidental Explorer file/folder icon hover styling.
+- Strengthened selectors for Product Icon Theme glyphs rendered as `.action-label.codicon` and `.codicon`.
+- Added a clearer cyan → blue → violet aurora bloom, subtle lift/scale, and Activity Bar halo on hover.
+- Applied the Product Icon hover effect to Activity Bar, title bar, panel/sidebar actions, tabs and status-bar product icons.
+
 ## 3.10.5
 
 - Added **Aurora hover glow for Explorer file and folder icons**.
