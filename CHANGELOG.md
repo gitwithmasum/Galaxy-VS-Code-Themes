@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.10.5
+
+- Added **Aurora hover glow for Explorer file and folder icons**.
+- Hovering a file/folder now adds cyan → blue → violet light without recoloring the original File Icon Theme artwork.
+- Added a subtle icon lift/scale and a soft aurora strip behind the hovered Explorer row.
+- Added reduced-motion handling for the file-icon hover animation.
+
 ## 3.10.4
 
 - Added an **Aurora glow hover effect** for Galaxy UI icons.
