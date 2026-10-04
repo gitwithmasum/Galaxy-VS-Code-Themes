@@ -1,7 +1,7 @@
 # Masum Galaxy // Future Code
 
 <p align="center">
-  <img src="./images/marketplace-hero.png" alt="Masum Galaxy // Future Code — futuristic VS Code theme collection" width="100%">
+  <img src="./images/marketplace-banner.png" alt="Masum Galaxy // Future Code — futuristic VS Code theme collection" width="100%">
 </p>
 
 **11 futuristic VS Code themes. One extension. One Theme Selector. Optional animated cinematic workbench modes.**
@@ -16,7 +16,7 @@
 ## Theme Preview
 
 <p align="center">
-  <img src="./images/marketplace-banner.png" alt="Masum Galaxy // Future Code preview" width="100%">
+  <img src="./images/marketplace-hero.png" alt="Masum Galaxy // Future Code preview" width="100%">
 </p>
 
 The core **Masum Galaxy // Future Code** palette is built around a deep-space editor surface with **cyan keywords**, **purple functions**, **green strings**, **gold numbers**, **pink types/classes** and cool-white foreground text.
