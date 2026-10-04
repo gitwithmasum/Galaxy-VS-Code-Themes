@@ -12,6 +12,75 @@
 
 > **Marketplace:** [Install Masum Galaxy // Future Code](https://marketplace.visualstudio.com/items?itemName=gitwithmasum.masum-galaxy-future-code)
 
+
+## Theme Preview
+
+<p align="center">
+  <img src="images/marketplace-banner.png" alt="Masum Galaxy // Future Code preview" width="100%">
+</p>
+
+The core **Masum Galaxy // Future Code** palette is built around a deep-space editor surface with **cyan keywords**, **purple functions**, **green strings**, **gold numbers**, **pink types/classes** and cool-white foreground text.
+
+### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Galaxy Portfolio</title>
+  </head>
+  <body class="galaxy-app">
+    <h1>Build the Future</h1>
+  </body>
+</html>
+```
+
+### CSS
+
+```css
+:root {
+  --bg: #030510;
+  --accent: #00f7ff;
+}
+
+.galaxy-card {
+  background: rgba(5, 8, 23, 0.88);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 28px #00f7ff55;
+}
+```
+
+### JavaScript
+
+```javascript
+const themes = ["Galaxy", "AI Core", "Cyber City"];
+
+function activateTheme(name) {
+  const active = themes.includes(name);
+  return active ? `Loading ${name}` : "Unknown";
+}
+
+activateTheme("Galaxy");
+```
+
+### Python
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Theme:
+    name: str
+    animated: bool = True
+
+def launch(theme: Theme) -> str:
+    return f"{theme.name} ready"
+
+print(launch(Theme("Galaxy")))
+```
+
+> Preview note: syntax colors vary slightly by language grammar and VS Code tokenization, while the theme keeps the same Galaxy visual identity.
+
 ## 11 included themes
 
 | # | Theme | Visual direction |
