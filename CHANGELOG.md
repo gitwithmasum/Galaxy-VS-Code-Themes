@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.10.8
+
+- Added a Marketplace-safe **Theme Preview** section near the top of the README.
+- Added separate HTML, CSS, JavaScript and Python syntax previews using the Masum Galaxy visual language.
+- Optimized Marketplace search keywords around VS Code themes, galaxy, futuristic, neon, cyberpunk, animated coding and space themes.
+- Kept PNG artwork for Marketplace compatibility and clearer visual presentation.
+
 ## 3.10.7
 
 - Removed the Product Icon Aurora hover CSS from **Masum Galaxy // Future Code**.
